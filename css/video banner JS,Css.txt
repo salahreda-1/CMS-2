@@ -1,0 +1,120 @@
+const section = document.createElement("section");
+section.classList.add("full-width-video-section");
+
+const video = document.createElement("video");
+video.src =
+    "https://github.com/wpAzzrk/Moaaz/raw/refs/heads/main/videos/6f62264ca1ba78bf22aca839579fec74-ezgif.com-gif-to-mp4-converter.mp4";
+video.autoplay = true;
+video.muted = true;
+video.loop = true;
+video.style.width = "100%";
+video.style.height = "100%";
+
+section.appendChild(video);
+
+const targetDiv = document.querySelector(".image-text");
+if (targetDiv) {
+    targetDiv.parentNode.insertBefore(section, targetDiv);
+} else {
+    console.error('Element with class "target div" not found.');
+}
+
+
+
+
+
+/* Custom Video */
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-width-video-section {
+    margin-bottom: 2rem;
+    min-height: var(--banner1-height-mob);
+    position: relative;
+    overflow: hidden;
+}
+
+.full-width-video-section::after {
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.full-width-video-section:hover:after {
+    z-index: 2;
+}
+
+.full-width-video-section .video-overlay {
+    opacity: 0;
+}
+
+.full-width-video-section:hover .video-overlay {
+    opacity: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+.overlay-heading {
+    font-size: 2rem;
+    font-weight: 700 !important;
+    margin-bottom: 2rem;
+}
+
+.overlay-paragraph {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn-changing {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--f-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-changing:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+    .overlay-heading {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+.overlay-paragraph {
+    font-size: 0.8rem;
+}
+.video-overlay {
+    width: 90%;
+}
+.full-width-video-section::after {
+    z-index: 2;
+}
+.full-width-video-section .video-overlay {
+    opacity: 1;
+}
+}
+

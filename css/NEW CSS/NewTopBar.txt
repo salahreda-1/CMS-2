@@ -1,0 +1,93 @@
+
+// Insert the banner swap (now called banSwiper)
+const banSwiperHTML = `
+<div class="banner-swap">
+   <div class="bannt">
+       <div class="banrerr" dir="rtl">خدمة عملاء ممتازة <i class="fa-solid fa-headset"></i></div>
+       <div class="banrerr" dir="rtl">توصيل سريع <i class="fa-solid fa-truck-fast"></i></div>
+       <div class="banrerr" dir="rtl">منتجات عالية الجودة <i class="fa-solid fa-box-open"></i></div>
+       <div class="banrerr" dir="rtl">دفع آمن <i class="fa-solid fa-lock"></i></div>
+       <div class="banrerr" dir="rtl">دعم 24/7 <i class="fa-solid fa-phone-volume"></i></div>
+       <div class="banrerr" dir="rtl">أسعار تنافسية <i class="fa-solid fa-tag"></i></div>
+
+       <!-- Repeat the same items for continuous scroll -->
+       <div class="banrerr" dir="rtl">خدمة عملاء ممتازة <i class="fa-solid fa-headset"></i></div>
+       <div class="banrerr" dir="rtl">توصيل سريع <i class="fa-solid fa-truck-fast"></i></div>
+       <div class="banrerr" dir="rtl">منتجات عالية الجودة <i class="fa-solid fa-box-open"></i></div>
+       <div class="banrerr" dir="rtl">دفع آمن <i class="fa-solid fa-lock"></i></div>
+       <div class="banrerr" dir="rtl">دعم 24/7 <i class="fa-solid fa-phone-volume"></i></div>
+       <div class="banrerr" dir="rtl">أسعار تنافسية <i class="fa-solid fa-tag"></i></div>
+   </div>
+</div>
+`;
+
+*--------------------------------------CSS------------------------------------------------*/
+
+.banner-swap {
+    width: 100%;
+    background: linear-gradient(45deg, var(--second-color), var(--main-color));
+    color: var(--third-color);
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+}
+
+.bannt {
+    display: flex;
+    width: 100%;
+    animation: banSwiperScroll 12s linear infinite;
+    will-change: transform;
+}
+
+.bannt:hover {
+    animation-play-state: paused;
+    /* Pause scroll on hover */
+}
+
+.banrerr {
+    white-space: nowrap;
+    padding: 0 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.banrerr:hover {
+    color: var(--third-color);
+    text-shadow: 0 0 8px var(--third-color), 0 0 12px var(--third-color);
+    /* Glowing effect */
+}
+
+.banrerr i {
+    margin-left: 10px;
+    margin-right: 10px;
+    animation: bounceIcon 1.5s infinite ease-in-out;
+    /* Icon bounce */
+}
+
+/* Bouncing icon effect */
+@keyframes bounceIcon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Smooth scrolling renamed from tickerScroll to banSwiperScroll */
+@keyframes banSwiperScroll {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}

@@ -1,0 +1,23 @@
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Step 1: Select the section using its class
+    var section = document.querySelector("section.s-block--hero-slider");
+
+    if (section) {
+      // Step 2: Find the p tag inside that section
+      var p = section.querySelector("div.text-white p");
+
+      if (p) {
+        // Step 3: Create the new button
+        var button = document.createElement("button");
+        button.textContent = "تسوق الآن";
+        button.className = "mt-4 px-4 py-2 bg-white text-black rounded-lg font-semibold";
+        button.onclick = function () {
+          window.location.href = "#"; // Replace with your actual link
+        };
+
+        // Step 4: Insert the button after the <p>
+        p.parentNode.insertBefore(button, p.nextSibling);
+      }
+    }
+  });

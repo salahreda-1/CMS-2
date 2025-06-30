@@ -1,0 +1,66 @@
+let name = "منصه عوائد";
+let link = "https://awaeed.com/";
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".copyright-text p").innerHTML = `صنع بحب على    
+  <a href="${link}">${name}</a>`;
+});
+
+
+
+/*----------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+  // 1. Create a wrapper element and set its innerHTML
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = `
+    <salla-social class="mb-6 s-social-list-1 hydrated custom-social-block">
+      <ul>
+        <li class="s-social-link">
+          <a href="https://www.instagram.com/haans.88" target="_blank" title="instagram" aria-label="instagram" rel="noopener">
+            <span class="s-social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <title>instagram</title>
+                <path d="M23 32h-14c-4.971..."></path>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="s-social-link">
+          <a href="https://www.snapchat.com/add/al_han1418" target="_blank" title="snapchat" aria-label="snapchat" rel="noopener">
+            <span class="s-social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <title>snapchat</title>
+                <path d="M16.186 30h-0.266..."></path>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="s-social-link">
+          <a href="https://www.tiktok.com/@haans88" target="_blank" title="tiktok" aria-label="tiktok" rel="noopener">
+            <span class="s-social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <title>tiktok</title>
+                <path d="M29.046 7.029c-3.359..."></path>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </salla-social>
+  `;
+
+  // 2. Get the new social element
+  const newSocialElement = wrapper.firstElementChild;
+
+  // 3. Select the grid container
+  const grid = document.querySelector('.store-footer__inner .grid');
+
+  // 4. Insert the new element as the 4th item
+  if (grid && grid.children.length >= 3) {
+    grid.insertBefore(newSocialElement, grid.children[3]);
+  } else if (grid) {
+    grid.appendChild(newSocialElement);
+  } else {
+    console.error('No .grid container found.');
+  }
+});

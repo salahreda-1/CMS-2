@@ -1,0 +1,60 @@
+/* Add custom CSS styles below */ 
+/* Add custom CSS styles below */ 
+.top-navbar {
+display:none;
+}
+.slider-banner-main-0 .container {
+    max-width: 900px !important;
+    margin-right: 5%;
+}
+
+@media(max-width:768px){
+
+ .slider-banner-main-0 .container { 
+    margin-right: 0%;
+} 
+.landing-banner >div >div {
+
+   
+    text-align: center !important;
+    align-items: center!important;
+    background-color: #ffffffb3;
+    padding: 15px;
+    border-radius: 20px;
+
+}  
+.landing-page-first-bannar .txt .custom-dlay-heading {
+   
+    color: #003661 !important;
+}
+}
+.slider-banner-main-7 .container {
+    max-width: 600px !important;
+}
+@media(min-width:768px){
+
+    .slider-banner-main-7 .container {
+    margin-right:5% !important;
+}
+}
+
+
+
+.copyright-text p {
+    
+    color: rgb(255 255 255) !important;
+  
+}
+
+.banner-entry {
+    height: 600px !important;
+}
+
+section:nth-child(2 of .ads) .img {
+
+  max-height:600px!important;
+}
+
+.s-tabs-header *:not(.s-tabs-active , .s-tabs-active span) {
+    background-color: #ffffff !important;  
+}

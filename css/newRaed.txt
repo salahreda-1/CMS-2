@@ -1,0 +1,242 @@
+/* Add custom CSS styles below */ 
+/* Add custom CSS styles below */ 
+
+/* Floating Navbar */
+@media(min-width:1024px){
+  .index div#mainnav {
+    position: absolute;
+    width: 95%;
+    z-index: 2;
+    left: 50%;
+    top: 1.5%;
+    transform: translate(-50%, 0);
+    border-radius: 2rem;
+    height: 90px !important;!i;!;
+  }
+  .inner{
+    border-radius:2rem
+  }
+}
+div#mainnav >div >div {
+max-width:80% !important;
+}
+
+#mainnav,
+.inner,
+.sub-menu {
+  background: #7c918f !important;
+}
+
+#mainnav,
+#mainnav i:before,
+#mainnav b {
+  color: white !important;
+}
+
+.inner {
+  background-color: #fff;
+}
+.main-menu li.root-level > a {
+  color: white;
+}
+
+.main-nav .icon {
+color: black;}
+
+
+.s-cart-summary-total {
+  color: #2C1A06;
+}
+
+.navbar-brand img {
+  max-height: 6rem !important;
+  max-width: 180px !important;
+ 
+}
+
+/*swiper photos start*/
+
+.s-block--photos-slider .swiper-slide {
+  width: 100% !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.s-block--photos-slider {
+  margin-top: 0px !important;
+}
+.swiper {
+  padding: 0px !important;
+}
+/*swiper photos end*/
+
+/*grid start*/
+
+
+.md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 768px){
+.banner-entry{
+      height: 92px;
+  }
+.s-block--banners .md\:grid-cols-3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.md\:grid-cols-3 .banner-entry{
+    width: 28%;
+}
+}
+.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.banner-entry .lazy__bg {
+  background-size: contain;
+
+  background-repeat: no-repeat;
+}
+
+.banner-entry {
+  height: 400px !important;
+  background-color: transparent;
+}
+@media (max-width: 768px) {
+  ..md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+ 
+}
+}
+
+@media (max-width: 768px) {
+  .banner-entry {
+    background-color: transparent;
+     height: 150px !important;
+  }
+}
+
+/*grid end*/
+
+/*slider card start*/
+
+.s-products-slider-card.swiper-slide {
+  width: 50%;
+}
+
+.s-products-slider-card.swiper-slide {
+  margin-bottom: 30px;
+}
+
+.s-block--photos-slider .s-slider-block__title-nav {
+  display: none;
+}
+
+/*slider card button  start*/
+.s-product-card-entry .s-button-element  {
+  background-color: #6A8783 !important;
+}
+button.undefined {
+  color: white;
+}
+.s-button-primary {
+  background-color: #6A8783 !important;
+
+
+}
+
+.s-product-card-content-title a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*slider card button end*/
+
+/*slider card end*/
+
+.banner--fixed img {
+  background-color: transparent;
+}
+
+
+
+/*footer start*/
+.store-footer__inner {
+  background-color: #6A8783 !important;
+  color: white;
+}
+
+footer * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*footer end*/
+
+
+
+
+/* Hover Effect */
+
+.banner-entry > div {
+  background-repeat: no-repeat;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.banner-entry > div:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.banner-entry > div:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+.banner-entry > div:active:after {
+  opacity: 0;
+}
+
+.banner-entry > div:not(:hover) {
+  transform: scale(0.95);
+}
+
+/*
+.store-footer__inner a[href="https://fakhm-store.com/"]::before {
+    content: "";
+    display: block;
+    background-image: url('https://cdn.salla.sa/form-builder/QMzkK1YpBFxu7UFAc7l9WNIHq2xXGVQTbohh5AJB.png'); /* Replace with your logo URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;  /* Set your desired width for the logo */
+    height: 100px;  /* Set your desired height for the logo */
+    margin: 0px auto 0; /* Centers the logo and gives space from the heading */
+}
+a[href="https://fakhm-store.com/"] h3 {
+
+    display:none;
+}
+
+*/

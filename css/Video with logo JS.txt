@@ -1,0 +1,63 @@
+const section = document.createElement('section');
+section.classList.add('full-width-video-section'); 
+section.style.position = 'relative';  // Keep the section as relative positioning
+section.style.marginTop = '0';
+
+// Create the video element
+const video = document.createElement('video');
+video.src = 'https://github.com/salahreda-1/videos/raw/refs/heads/main/a0561df2f316be88d3327df613e09dc5ce7ab0f3.mp4'; 
+video.autoplay = true; 
+video.muted = true; 
+video.loop = true; 
+video.style.width = '100%'; 
+video.style.height = '100%'; 
+
+section.appendChild(video);
+
+// Create the image (logo) element
+const img = document.createElement('img');
+img.src = 'https://cdn.salla.sa/form-builder/RiP2QUDRwPskgg1bmLepjTvjMaF1xJbj3SC0o3vz.png'; // Replace with your image URL
+img.alt = 'Overlay Image';
+img.style.position = 'absolute';
+img.style.top = '50%';
+img.style.left = '50%';
+img.style.transform = 'translate(-50%, -50%)'; // Centers the image
+img.style.maxWidth = '40%';  // Optional: limits the size of the image
+img.style.maxHeight = '40%'; // Optional: limits the size of the image
+
+// Append the image over the video
+section.appendChild(img);
+
+// Create the button element
+const button = document.createElement('button');
+button.textContent = 'تسوق الآن';  // Button text
+button.style.position = 'absolute';
+button.style.top = 'calc(50% + 70px)';  // Adjust the button position below the image
+button.style.left = '50%';
+button.style.transform = 'translateX(-50%)';  // Centers the button horizontally
+button.style.padding = '10px 20px';
+button.style.backgroundColor = '#3498db';  // Button color
+button.style.color = '#fff';
+button.style.border = 'none';
+button.style.borderRadius = '5px';
+button.style.fontSize = '16px';
+button.style.cursor = 'pointer';
+
+// Optional: Button hover effect
+button.addEventListener('mouseover', () => {
+    button.style.backgroundColor = '#2980b9';  // Darker color on hover
+});
+button.addEventListener('mouseout', () => {
+    button.style.backgroundColor = '#3498db';  // Reset button color
+});
+
+// Append the button to the section
+section.appendChild(button);
+
+// Insert the section into the targetDiv
+const targetDiv = document.querySelector('.g_cat');
+if (targetDiv) {
+    targetDiv.parentNode.insertBefore(section, targetDiv);
+} else {
+    console.error('Element with class "target div" not found.');
+}

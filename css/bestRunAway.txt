@@ -1,0 +1,78 @@
+/* Add custom CSS styles below */ 
+/*------main-image------*/
+.swiper.s-slider-container.swiper-initialized {
+    margin-left: 0!important;
+   padding:0px
+}
+/*-------------------------------------*/
+salla-slider.photos-slider .swiper:where([dir=rtl],[dir=rtl] *) {
+     padding-left:0;
+}
+.swiper.s-slider-container.swiper-initialized {
+    margin-left: 0!important;
+    padding: 0px;
+}
+salla-slider.photos-slider .swiper-slide {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 100%;
+    padding: 0px;
+}
+ salla-slider.photos-slider .swiper-slide {
+    padding: 0rem;
+    margin: 0rem;
+    width: 100%;
+}
+.s-slider-block__title-nav {
+    visibility: hidden;
+}
+/*************/
+section[style*="#ff0000"] {
+    background-image: url("https://cdn.salla.sa/form-builder/MaoKuImms0ZEjRdT2qqMXmp6QdZVPgbIggNRLQRd.png") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    margin-bottom:-10% !important;
+}
+.s-count-down-boxed .s-count-down-item {
+    background: #2E2E2E;
+    color: #fff;
+}
+.s-count-down-item-label {
+    opacity: 0.6;
+    color: #fff;
+}
+/**************************************/
+ /***********moved-banner***********/
+ .moved_banner  .banner-item{
+        height:40vh !important
+        }
+        @media (max-width:768px){
+         .moved_banner  .banner-item{
+        height:24vh !important
+        }
+        }
+.moved_banner .z-0.circle {
+        display: none;
+    }
+    .moved_banner img[alt="Sub Image"]{
+        opacity: 0;
+    }
+  .moved_banner  img.main_img {
+    display: none;
+}
+@media (min-width:991px){
+.banner-item{
+    justify-content: center;
+} 
+}
+    @media screen and (max-width:768px){
+        .store-footer__inner * {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            }
+        .store-footer__inner > div > div > div {
+        flex-direction: column;
+        }
+        }

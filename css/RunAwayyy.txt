@@ -1,0 +1,85 @@
+/* Add custom CSS styles below */ 
+/* Add custom CSS styles below */
+.s-product-card-buttons .s-product-card-eye-btn button {
+  border-style: none;
+  background-color: #414042;
+  background-color: #ffffff !important;
+  color: var(--color-secondary);
+}
+
+#carousel-10 .large_image {
+  height: 200% !important;
+}
+
+.slider_image img {
+  object-fit: fill !important;
+}
+@media (max-width: 768px) {
+  #mainnav {
+    height: 110px !important;
+  }
+}
+
+.main-nav-container.fixed-pinned .navbar-brand img {
+  max-height: 100px;
+  width: 140px !important;
+}
+.main-nav-container .navbar-brand img {
+  max-height: 110px;
+  width: 140px !important;
+}
+
+@media (min-width: 1024px) {
+  footer .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.flex.justify-around.flex-row {
+  flex-direction: column !important;
+}
+
+footer * {
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer .grid > div {
+  grid-column: span 1 / span 1;
+}
+
+.flex.justify-around.flex-row {
+  flex-direction: column !important;
+}
+
+/*footer end*/
+
+
+section:nth-child(2 of .main_banner) .custom_container{
+width:100%!important;
+}
+
+section:nth-child(3 of .main_banner) .custom_container{
+width:100%!important;
+}
+
+.category_section + style + script  + section + script  + section {
+    height:400px;
+  margin-bottom: -165px !important;
+}
+
+custom-salla-product-card {
+background-color:#fff!important;
+}
+
+.footer-is-light .store-footer {
+    background-color: #4C0F2E !important;
+}
+
+footer .log{
+
+    width: 91px;
+    height: auto;
+    filter: brightness(0) invert(1);
+
+}

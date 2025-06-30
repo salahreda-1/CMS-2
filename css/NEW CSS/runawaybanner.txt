@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+    .main_banner .overflow-clip {
+        height: 600px;
+    }
+}
+
+.moved_banner .banner-item {
+    display: flex;
+}

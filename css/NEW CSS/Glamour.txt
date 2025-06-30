@@ -1,0 +1,42 @@
+/* Add custom CSS styles below */ 
+/*-----------header---------------*/
+.top-navbar {
+    
+    display: none;
+}
+
+
+.store-header {
+position: relative !important;
+}
+
+
+
+@media (max-width: 768px) {
+  section:nth-child(1 of .landing-page-first-bannar) .txt {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 120px;
+  }
+
+  .landing-page-first-bannar h1 {
+    width: 100% !important;
+    /* backdrop-filter: blur(10px); */
+    background-color: #771c077a;
+    border-radius: 20px;
+    padding: 3px;
+  }
+  .landing-page-first-bannar >div >div {
+  text-align: center;
+  }
+}
+
+
+
+
+
+/*---------3pics-banner----------*/
+.ad-star-btn {
+  
+    background-color: #771c07 !important;
+}

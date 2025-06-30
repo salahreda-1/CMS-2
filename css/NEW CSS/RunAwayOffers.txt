@@ -1,0 +1,16 @@
+/* Add custom CSS styles below */ 
+section[style*="#ff0000"] {
+    background-image: url("https://cdn.salla.sa/form-builder/0lQT61Zsz3LDgzH9sbyYg3c06PpfMrpOMVspNb5C.png") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    margin-bottom:-8% !important;
+}
+.s-count-down-boxed .s-count-down-item {
+    background: #2E2E2E;
+    color: #fff;
+}
+.s-count-down-item-label {
+    opacity: 0.6;
+    color: #fff;
+}

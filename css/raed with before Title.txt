@@ -1,0 +1,291 @@
+/* Add custom CSS styles below */ 
+/* Add custom CSS styles below */ 
+/* Add custom CSS styles below */ 
+
+/* -------------loding--------------- */ 
+.index:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff url("https://cdn.salla.sa/form-builder/ksK87m0QqWiUP2N322GBfkEIWLjFrZlHNe09OFGp.png");
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9 !important;
+  background-size: 250px !important;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  animation-name: logobg;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes logobg {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/* Floating Navbar */
+@media(min-width:1024px){
+  .index div#mainnav {
+    position: absolute;
+    width: 57%;
+    z-index: 2;
+    right: 11%;
+    top: 1%;
+    transform: translate(-50%, 0);
+    border-radius: 2rem;
+  }
+  .inner{
+    border-radius:2rem
+  }
+}
+
+#mainnav,
+.inner,
+.sub-menu {
+  background: transparent !important;!i;!;
+}
+
+#mainnav,
+#mainnav i:before,
+#mainnav b {
+  /* color: #562d0e !important; */
+}
+
+.inner {
+  background-color: #fff;
+}
+.main-menu li.root-level > a {
+  color: #562d0e;
+}
+
+.main-nav .icon {
+color: #562d0e;}
+
+
+.s-cart-summary-total {
+  color: ##562d0e;
+}
+
+.navbar-brand img {
+  max-height: 4rem;
+  max-width: 180px !important;
+ 
+}
+
+
+
+
+.s-block__title h2::before{content: " ";display: block;width: 342px;height: 25px;position: absolute;background-color: #e5b3a1;top: 23px;z-index: -1;border-radius: 0 0 12px;}
+.s-block__title h2{font-size: 36px;color: #683924;font-weight: bold;margin-right: 10px;display: inline-block;display: flex;align-items: center!important;justify-content: center !important;}
+.s-block__title {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*swiper photos start*/
+
+.s-block--photos-slider .swiper-slide {
+  width: 100% !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.s-block--photos-slider {
+  margin-top: 0px !important;
+}
+.swiper {
+  padding: 0px !important;
+}
+/*swiper photos end*/
+
+/*grid start*/
+
+@media(min-width:768px){}
+.md\:grid-cols-3 {
+  display:flex!important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.md\:grid-cols-3 .banner-entry {
+  flex-grow: 1;
+  max-width: 327px;
+  min-width: 300px;
+}
+
+}
+.banner-entry .lazy__bg {
+  background-size: contain;
+
+  background-repeat: no-repeat;
+}
+
+.banner-entry {
+  height: 373px !important;
+  background-color: transparent;
+}
+}
+@media (max-width: 768px) {
+  ..md\:grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+ 
+}
+}
+
+@media (max-width: 768px) {
+  .banner-entry {
+    background-color: transparent;
+    height: 181px !important;
+  }
+  .md\:grid-cols-3 .banner-entry {
+  flex-grow: 1;
+  max-width: 154px;
+  min-width: 149px;
+}
+}
+
+/*grid end*/
+
+/*slider card start*/
+
+.s-products-slider-card.swiper-slide {
+  width: 50%;
+}
+
+.s-products-slider-card.swiper-slide {
+  margin-bottom: 30px;
+}
+
+.s-block--photos-slider .s-slider-block__title-nav {
+  display: none;
+}
+
+.s-product-card-entry {
+  
+  background-color: rgb(255 242 237) !important;
+    
+}
+
+.s-product-card-content a,
+.s-product-card-content h4 {
+color:#683924 !important
+}
+
+/*slider card button  start*/
+.s-product-card-entry .s-button-element  {
+  background-color: #fff2ed !important;
+}
+button.undefined {
+  color: #562d0e;
+}
+.s-button-primary {
+  background-color: #2C1A06 !important;
+
+
+}
+
+.s-product-card-content-title a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.s-button-element:hover {
+  background-color: #683924 !important; 
+  color: #fff; 
+  border-color: #683924 !important; 
+}
+/*slider card button end*/
+
+/*slider card end*/
+
+.banner--fixed img {
+  background-color: transparent;
+}
+
+
+section:nth-child(1 of section.s-block--fixed-banner) {
+
+  margin: auto;
+  margin-top: 50px;
+  background-color: transparent;
+  max-width: 350px;
+
+}
+
+
+
+/*footer start*/
+.store-footer__inner {
+  background-color: #562D0E !important;
+  color: white;
+}
+
+footer * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*footer end*/
+
+/* Hover Effect */
+
+.banner-entry > div {
+  background-repeat: no-repeat;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.banner-entry > div:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.banner-entry > div:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+.banner-entry > div:active:after {
+  opacity: 0;
+}
+
+.banner-entry > div:not(:hover) {
+  transform: scale(0.95);
+}

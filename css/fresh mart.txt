@@ -1,0 +1,83 @@
+/* Add custom CSS styles below */ 
+.pro_addit,.dis_background {
+display:none!important;
+}
+
+
+.main-img .pro_image {
+    left: -4% !important;
+    top: 9% !important;
+}
+@media(max-width:768px){
+.main-img .pro_image {
+    left: 9% !important;
+    top: -25% !important;
+}
+}
+
+.main-img .pro_background {
+    position: absolute;
+    width: 70% !important;
+}
+@media(min-width:768px){
+.category {
+    padding: 12px;
+    justify-content: space-between !important;
+}
+}
+
+
+@media(min-width:768px){
+ .slider-image-8  .text-wrapper {
+  margin-left: 55% !important;
+  margin-right: auto !important;
+  text-shadow: 1px 1px 2px white;
+  margin-top: 90px;
+}
+}
+ .slider-image-8  h1 {
+color:#FFF;
+}
+
+
+@media (max-width: 490px) {
+    .slider-image .slider-text .text-wrapper {
+        max-width: 100%;
+        text-align: center;
+        background-color: #ffffff73;
+        border-radius: 20px;
+        padding: 8px;
+    }
+}
+
+
+footer * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media(min-width:1024px){
+footer .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+
+footer * {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .grid > div {
+    grid-column: span 1 / span 1 ;
+}
+
+.footer-bottom {
+    background-color: rgb(255 255 255);
+    
+}
+.footer-bottom p {
+    color:#000 !important;
+    
+}
+
+/*footer end*/

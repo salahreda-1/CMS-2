@@ -1,0 +1,14 @@
+document.addEventListener('contextmenu', function(event) {
+event.preventDefault();
+alert('NO');
+});
+// تعطيل نسخ النصوص
+document.addEventListener('copy', function(event) {
+event.preventDefault();
+alert('نسخ المحتوى محظور.');
+});
+
+// تعطيل تحديد النصوص
+document.addEventListener('selectstart', function(event) {
+event.preventDefault();
+});

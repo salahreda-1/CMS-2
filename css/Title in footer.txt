@@ -1,0 +1,6 @@
+let name = "منصة درب";
+let link = "https://darbplatform.com/";
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".copyright-text p").innerHTML = صنع بحب على | 2024  
+<a href="${link}">${name}</a>;
+});

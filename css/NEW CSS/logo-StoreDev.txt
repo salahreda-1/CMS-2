@@ -1,0 +1,6 @@
+  document.addEventListener("DOMContentLoaded", function() {
+    const logoImg = document.querySelector('.navbar-brand img');
+    if (logoImg) {
+      logoImg.src = "https://cdn.salla.sa/form-builder/ziKwCSeS8r6nvpHbTmvx9bn8p2OXncwGZia2PFEU.png";
+    }
+  });

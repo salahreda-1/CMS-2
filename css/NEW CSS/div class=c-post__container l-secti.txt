@@ -1,0 +1,140 @@
+<div class="c-post__container l-section l-section--container l-section--bottom-margin l-section--no-sidebar c-post__container--page">
+    <div class="l-section__content">
+        <article id="post-3702" class="c-post c-post--standard c-post--no-sidebar c-post--page post-3702 page type-page status-publish has-post-thumbnail hentry">
+            <div class="c-post__wrap c-post__wrap--thumb c-post__wrap--no-sidebar ">
+                <div class="c-post__inner">
+                    <div class="c-post__content h-clearfix entry-content entry-content--fullwidth ">
+
+                        <p style="text-align:center;font-weight:bold !important">آخر تحديث لحظي لسعر الذهب اليوم: <span id="time">١١:٢٠ ص</span></p>
+
+                        <script>
+                            var datetime = new Date().toLocaleTimeString('ar-EG',{timeZone:'Africa/Cairo',hour: '2-digit', minute:'2-digit'});
+                            document.getElementById("time").textContent = datetime;
+                        </script>
+
+                        <div style="display: flex; align-items: center; gap: 20px;justify-content: center;margin-bottom: 2rem;">
+                            <div style="font-size: 16px;">سعر دولار الذهب والصاغة:  <span style="font-weight: bold;">49.9 $</span></div>
+                            <div style="position: relative; font-size: 16px;">
+                                الفجوة السعرية لسعر الذهب اليوم:
+                                <span onclick="toggleTooltip()" style="cursor: pointer; display: inline-block;">
+                                    <img decoding="async" src="https://s.w.org/images/core/emoji/15.0.3/svg/2139.svg" alt="Info" style="width: 20px; height: 20px; vertical-align: middle;">
+                                </span>
+                                <div id="tooltip" style="width: max-content;display: none; position: absolute; top: 30px; left: 0; background: white; border: 1px solid #ddd; padding: 10px; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 10;">
+                                    <p style="margin: 0;">الفجوة السعرية لعيار 21: <strong>4.69- ج</strong></p>
+                                    <p style="margin: 0;">الفجوة السعرية لعيار 24: <strong>5.36- ج</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function toggleTooltip() {
+                                var tooltip = document.getElementById("tooltip");
+                                tooltip.style.display = (tooltip.style.display === "none" || tooltip.style.display === "") ? "block" : "none";
+                            }
+                        </script>
+
+                        <select id="gbs-country-code"><option value="EG">مصر</option></select>
+                        <select id="gbs-metal"><option value="gold">ذهب</option><option value="silver">فضه</option></select>
+
+                        <div class="prices-table">
+                            <table>
+                                <tbody>
+                                    <tr class="header">
+                                        <td>العيار</td>
+                                        <td>سعر الشراء</td>
+                                        <td>سعر البيع</td>
+                                    </tr>
+                                    <tr data-gram="24">
+                                        <td>جرام عيار 24 <span class="change-indicator" style="margin-right: 8px;"></span></td>
+                                        <td class="num5349" data-val="5349">5349 ج</td>
+                                        <td class="num5326" data-val="5326">5326 ج</td>
+                                    </tr>
+                                    <tr data-gram="22">
+                                        <td>جرام عيار 22 <span class="change-indicator" style="margin-right: 8px;"></span></td>
+                                        <td class="num4903" data-val="4903">4903 ج</td>
+                                        <td class="num4882" data-val="4882">4882 ج</td>
+                                    </tr>
+                                    <tr data-gram="21">
+                                        <td>جرام عيار 21 <span class="change-indicator" style="margin-right: 8px;"></span></td>
+                                        <td class="num4680" data-val="4680">4680 ج</td>
+                                        <td class="num4660" data-val="4660">4660 ج</td>
+                                    </tr>
+                                    <tr data-gram="18">
+                                        <td>جرام عيار 18 <span class="change-indicator" style="margin-right: 8px;"></span></td>
+                                        <td class="num4011" data-val="4011">4011 ج</td>
+                                        <td class="num3994" data-val="3994">3994 ج</td>
+                                    </tr>
+                                    <tr data-gram="14">
+                                        <td>جرام عيار 14 <span class="change-indicator" style="margin-right: 8px;"></span></td>
+                                        <td class="num3120" data-val="3120">3120 ج</td>
+                                        <td class="num3106" data-val="3106">3106 ج</td>
+                                    </tr>
+                                    <tr data-gram="dollar">
+                                        <td>الدولار <span class="change-indicator" style="margin-right: 8px;"></span></td>
+                                        <td class="num49.95" data-val="49.95">49.95 $</td>
+                                        <td class="num49.85" data-val="49.85">49.85 $</td>
+                                    </tr>
+                                    <tr data-gram="ounce">
+                                        <td>الأونصة <span class="change-indicator" style="margin-right: 8px;"></span></td>
+                                        <td class="num3333" data-val="3333">3333 $</td>
+                                        <td class="num3332.5" data-val="3332.5">3332.5 $</td>
+                                    </tr>
+                                    <tr data-gram="gold-pound">
+                                        <td>الجنيه الذهب <span class="change-indicator" style="margin-right: 8px;"></span></td>
+                                        <td class="num37440" data-val="37440">37440 ج</td>
+                                        <td class="num37420" data-val="37420">37420 ج</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <script>
+                            const oldPrices = {
+                                "24": 5320,
+                                "22": 4875,
+                                "21": 4650,
+                                "18": 3990,
+                                "14": 3100,
+                                "dollar": 49.90,
+                                "ounce": 3335,
+                                "gold-pound": 37400
+                            };
+
+                            function updateChangeIndicators() {
+                                const rows = document.querySelectorAll('.prices-table tbody tr[data-gram]');
+                                rows.forEach(row => {
+                                    const gram = row.getAttribute('data-gram');
+                                    const sellCell = row.querySelector('td:nth-child(3)');
+                                    const changeIndicator = row.querySelector('.change-indicator');
+                                    if (!sellCell || !changeIndicator) return;
+
+                                    let oldPrice = oldPrices[gram];
+                                    let currentPrice = parseFloat(sellCell.getAttribute('data-val'));
+
+                                    if (isNaN(oldPrice) || isNaN(currentPrice)) {
+                                        changeIndicator.textContent = '';
+                                        return;
+                                    }
+
+                                    let diff = currentPrice - oldPrice;
+                                    let absDiff = Math.abs(diff).toFixed(2);
+
+                                    if (diff > 0) {
+                                        changeIndicator.innerHTML = `<span style="color:green;">&#9650; +${absDiff} ${gram === 'dollar' || gram === 'ounce' ? '$' : 'ج'}</span>`;
+                                    } else if (diff < 0) {
+                                        changeIndicator.innerHTML = `<span style="color:red;">&#9660; -${absDiff} ${gram === 'dollar' || gram === 'ounce' ? '$' : 'ج'}</span>`;
+                                    } else {
+                                        changeIndicator.textContent = '-';
+                                    }
+                                });
+                            }
+
+                            updateChangeIndicators();
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="c-post__row-2"></div>
+        </article>
+    </div>
+</div>

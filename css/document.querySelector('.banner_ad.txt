@@ -1,0 +1,1 @@
+document.querySelector('.banner_ad .img1  p ').innerHTML = 'Vega Clothing was born ';

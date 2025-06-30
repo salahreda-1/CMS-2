@@ -1,0 +1,6 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const buttonSpan = document.querySelector('.landing-page-0 a span');
+  if (buttonSpan) {
+    buttonSpan.textContent = "تسوق الان";
+  }
+});

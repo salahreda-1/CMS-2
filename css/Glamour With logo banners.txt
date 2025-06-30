@@ -1,0 +1,233 @@
+/* Add custom CSS styles below */ 
+/* Add custom CSS styles below */ 
+/*---------header-------------*/
+
+.top-navbar {
+    
+    display: none;
+}
+.index .inner i{
+     color: white ;
+}
+
+.index .main-menu li.root-level > a {
+  color: black ;
+}
+
+
+.fixed-pinned .inner i{
+     color: black !important;
+}
+.fixed-pinned li.root-level > a {
+     color: black !important;
+}
+
+
+
+/*---------titles-------------*/
+
+.image-title .title-heade {
+  background-color: transparent!important;
+  margin-left: 20px;
+}
+
+
+
+/*frist slider*/
+
+/* Banner section to position the video correctly */
+
+
+.full-width-video-section button {
+
+    background-color: #ffffff78 !important;
+    color: rgb(0 0 0) !important;
+    font-size: 27px !important;
+
+}
+@media(max-width:768px){
+.full-width-video-section button {
+
+      font-size: 25px !important;
+       margin-top: -7%;
+   }
+}
+
+
+
+.txt::before {
+    content: "";
+    display: block;
+    background-image: url('https://cdn.salla.sa/form-builder/1v9SgNClRwUq9i6fxMJI4y2Lz2ytmWcUTqJuo72o.png'); /* Replace with your logo URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;  /* Set your desired width for the logo */
+    height: 200px;  /* Set your desired height for the logo */
+    margin: 20px auto 0; /* Centers the logo and gives space from the heading */
+}
+
+section:nth-child(1 of .landing-page-first-bannar) .txt {
+  margin-left: auto !important;
+  margin-right: 55% !important;
+  /* margin-top: 15% !important; */
+  text-shadow: 1px 1px 2px white;
+  margin-top: 90px;
+}
+
+.landing-page-first-bannar p {
+
+    font-size: 26px;
+    width: 70%;
+    margin: auto;
+
+}
+
+@media (max-width: 768px) {
+  .txt.w-full.container.ltr\:\[transform\:rotateY\(-180deg\)\] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 120px;
+  }
+
+  .landing-page-first-bannar h1 {
+    width: 100% !important;
+    /* backdrop-filter: blur(10px); */
+    background-color: #ffffff6e;
+    border-radius: 20px;
+    padding: 3px;
+  }
+}
+
+/*grid-------------*/
+.g_cat .grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important ;
+}
+/*3 pics -------------*/
+
+.ads .img .over {
+  
+    background-color: #00000054;  
+ 
+}
+.banner_ad img2{
+    background-position: right;
+}
+.banner_ad img3{
+    background-position: left;
+}
+
+
+/*offers 2 pics -----------------------*/
+.product_deadline {
+    background: #fff;
+    border-radius: 8px;
+}
+
+
+/*weekly offers------------*/
+.weeklyOffers{
+    height: 140vh!important ;
+}
+
+@media(max-width:768px){
+.weeklyOffers{
+  height: 100vh !important;
+}
+}
+
+
+.weeklyOffers .text-xs{
+
+  line-height: 2.5rem;
+
+}
+
+
+
+
+
+/*out of stock*/
+
+.outof-stock {
+  color: #fff !important;
+}
+
+/*slider 2 pic*/
+
+.slider-bannars-moving {
+  display: flex !important;
+}
+
+.flex.justify-between {
+  display: flex;
+}
+
+.banner_ad .img3 > div {
+  background-position: left;
+}
+.banner_ad .img2 > div {
+  background-position:right;
+}
+
+.s-products-slider-card.swiper-slide {
+  width: 50%;
+}
+
+.s-products-slider-card.swiper-slide {
+  margin-bottom: 30px;
+}
+
+.s-block--photos-slider .s-slider-block__title-nav {
+  display: none;
+}
+
+/*slider card button  start*/
+.s-product-card-entry .s-button-element {
+  background-color: #7CA0C5!important;
+}
+button.undefined {
+  color: white;
+}
+.s-button-primary {
+  background-color: #e291b6 !important;
+}
+
+button.animate__animated.animate__fadeInUp {
+  background-color: #e291b6 !important;
+  color: #ffffff !important;
+  font-size: 24px;
+}
+
+
+/*مميزات الموقع ----------*/
+ .g_features .grid-cols-3 h3,
+  .g_features i {
+  color: #e291b6 !important;
+}
+
+/*-----------------------*/
+
+.s-product-card-content-title a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mb-8 {
+     margin-bottom: unset !important; 
+     margin-top: 20px !important; 
+}
+
+.s-infinite-scroll-btn{
+color:#fff!important;
+}
+
+.vr_hr_active {
+    color: aliceblue !important;
+}
+
+
+.imgs .img {
+max-height:100% !important;
+}

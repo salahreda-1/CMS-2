@@ -1,0 +1,194 @@
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.location.href === "https://qahwatii.com/category/jnbEAR") {
+    const container = document.createElement('div');
+    container.className = 'form-container';
+
+    const style = document.createElement('style');
+    style.textContent = `
+      .form-container {
+        width: 80%;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 30px 25px;
+        border-radius: 10px;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        box-sizing: border-box;
+        direction: rtl;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .form-container h2 {
+        text-align: center;
+        font-size: 24px;
+        color: #1d475b;
+        margin-bottom: 30px;
+      }
+
+      .form-container label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 15px;
+        color: #444;
+      }
+
+      .form-container input,
+      .form-container select,
+      .form-container textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #fdfdfd;
+        transition: border-color 0.3s ease;
+        box-sizing: border-box;
+      }
+
+      .form-container input:focus,
+      .form-container select:focus,
+      .form-container textarea:focus {
+        border-color: #28a745;
+        outline: none;
+      }
+
+      .form-container textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+
+      .form-container button {
+        margin-top: 30px;
+        padding: 14px;
+        width: 100%;
+        background-color: #1d475b;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background-color: #218838;
+      }
+
+      .form-container .error {
+        color: #dc3545;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .form-container {
+          width: 95%;
+          padding: 20px;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    const heading = document.createElement('h2');
+    heading.textContent = 'حجز توزيعات العيد';
+    container.appendChild(heading);
+
+    const fields = [
+      { label: 'الاسم', id: 'name', type: 'text' },
+      { label: 'رقم الجوال', id: 'phone', type: 'tel', placeholder: '+966' },
+      { label: 'تفاصيل الطلب (اختياري)', id: 'notes', type: 'textarea' },
+      {
+        label: 'اختر نوع العينة', id: 'choice', type: 'select', options: [
+          'شوكلاته',
+          'معمول بالتمر او الفستق',
+          'عينة من كريم مرطب',
+          'عينة من عطر بارد'
+        ]
+      }
+    ];
+
+    const inputs = {};
+
+    fields.forEach(field => {
+      const label = document.createElement('label');
+      label.textContent = field.label;
+      container.appendChild(label);
+
+      let input;
+      if (field.type === 'select') {
+        input = document.createElement('select');
+        field.options.forEach(opt => {
+          const option = document.createElement('option');
+          option.value = opt;
+          option.textContent = opt;
+          input.appendChild(option);
+        });
+      } else if (field.type === 'textarea') {
+        input = document.createElement('textarea');
+        input.rows = 3;
+      } else {
+        input = document.createElement('input');
+        input.type = field.type;
+        if (field.placeholder) input.placeholder = field.placeholder;
+      }
+
+      input.id = field.id;
+      inputs[field.id] = input;
+      container.appendChild(input);
+    });
+
+    const error = document.createElement('div');
+    error.className = 'error';
+    container.appendChild(error);
+
+    const btn = document.createElement('button');
+    btn.textContent = 'إرسال';
+    container.appendChild(btn);
+
+    const footer = document.querySelector('.store-footer');
+    if (!footer) return;
+
+    footer.parentNode.insertBefore(container, footer);
+
+    btn.addEventListener('click', () => {
+      error.textContent = '';
+      const name = inputs.name.value.trim();
+      const phone = inputs.phone.value.trim();
+      const choice = inputs.choice.value;
+      const notes = inputs.notes.value.trim();
+
+      if (!name || !phone) {
+        error.textContent = 'الرجاء تعبئة الاسم ورقم الجوال.';
+        return;
+      }
+
+      if (!phone.startsWith('+966')) {
+        error.textContent = 'رقم الجوال يجب أن يبدأ بـ +966';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'جارٍ الإرسال...';
+
+      let message = ` الاسم: ${name} الجوال: ${phone} الطلب: ${choice}`;
+      if (notes) {
+        message += ` ملاحظات: ${notes}`;
+      }
+
+      const whatsappUrl = `https://wa.me/966568184212?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = 'إرسال';
+      }, 2000);
+    });
+  }
+});
+

@@ -1,0 +1,85 @@
+ .custom-top-banner {
+    width: 100%;
+    background-color: #f1c37d;
+    overflow: hidden;
+    position: relative;
+    height: 40px;
+    z-index: 1000;
+  }
+
+  .custom-top-banner .marquee-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll-loop 10s linear infinite;
+  }
+
+  .custom-top-banner .marquee-text {
+    white-space: nowrap;
+    font-family: 'El Messiri', sans-serif;
+    font-size: 16px;
+    color: white;
+    line-height: 40px;
+    font-weight: 500;
+    /* padding-right: 60px; */
+  }
+
+  @keyframes scroll-loop {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .custom-top-banner {
+      height: 36px;
+    }
+
+    .custom-top-banner .marquee-text {
+      font-size: 14px;
+      /* padding-right: 40px; */
+    }
+
+    .custom-top-banner .marquee-track {
+      animation-duration: 70s; /* أبطأ على الموبايل */
+    }
+ .custom-top-banner .marquee-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll-loop 10s linear infinite;
+  }
+  }
+
+
+/*--------------------------------------------------------*/
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const banner = document.createElement('div');
+    banner.className = 'custom-top-banner';
+
+    const message = '🎁 شحن مجاني لجميع مناطق المملكة! تسوّق الآن من بابيلا ✨';
+
+    const repeated = `
+      <div class="marquee-track">
+        <span class="marquee-text">${message}</span>
+        <span class="marquee-text">${message}</span>
+        <span class="marquee-text">${message}</span>
+        <span class="marquee-text">${message}</span>
+      </div>
+    `;
+
+    banner.innerHTML = repeated;
+
+    const adElement = document.querySelector('.store-header');
+    if (adElement && adElement.parentNode) {
+      adElement.parentNode.insertBefore(banner, adElement);
+    } else {
+      console.error('لم يتم العثور على العنصر salla-advertisement.hydrated');
+    }
+  });
+
+
+

@@ -1,0 +1,261 @@
+/* Main Menu Styles fixed pinned */
+/*-----------------------------------------*/
+
+.offer-bar-preview16149{
+    background: #332941 !important;
+}
+.fixed-pinned {
+  background-color: #332941!important;
+}
+
+.fixed-pinned .inner i{
+     color: white !important;
+}
+
+.index .inner i{
+     color: white !important;
+}
+
+.index .main-menu li.root-level > a {
+  color: white !important;
+}
+
+.index .inner i {
+  color: white !important;
+}
+
+
+/* Navbar Brand Image */
+/*-----------------------------------------*/
+.navbar-brand img {
+  max-height: 4rem;
+  max-width: 180px !important;
+  background-color: transparent;
+}
+
+@media(max-width:768px){
+body.index .store-header {
+    position: relative !important ;
+    
+}
+.index .inner i {
+  color: black !important ;
+}
+
+.index .main-menu li.root-level > a {
+  color:black !important;
+}
+.fixed-pinned  .inner i {
+  color: white !important;
+}
+.fixed-pinned .main-menu li.root-level > a {
+  color: white !important;
+}
+}
+
+
+
+
+/* Hero Section Styles */
+/*-----------------------------------------*/
+
+.s-block--photos-slider .swiper-slide {
+  width: 100% !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.s-block--photos-slider {
+  margin-top: 0px !important;
+}
+.swiper {
+  padding: 0px !important;
+}
+
+
+
+/* Image Styling for Hero Section */
+/*-----------------------------------------*/
+index.frist-section-0 img {
+  height: 90% !important;
+}
+
+
+
+
+/* Flex Box Styles التصنيفات   */
+/*-----------------------------------------*/
+.f-flex ul {
+  justify-content: center;
+  gap: 3rem;
+}
+
+.f-flex li {
+  flex-grow: 1;
+  max-width: 300px;
+}
+@media(max-width:768px){
+.f-flex a {
+  font-size: 14px !important
+}
+}
+
+
+
+
+
+
+/* Offers Section */
+
+/*-----------------------------------------*/
+img.w-full.h-full {
+  object-fit: contain;
+}
+
+.furnitur_offer
+  .s-count-down-wrapper
+  .s-count-down-list
+  .s-count-down-item::after {
+    left: -14%;
+}
+
+.furnitur_offer
+  .s-count-down-wrapper
+  .s-count-down-list
+  .s-count-down-item
+  .s-count-down-item-value {
+  border: 1px solid var(--color-primary);
+}
+
+.furnitur_offer
+  .s-slider-container
+  .swiper-wrapper
+  .swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
+  display: flex;
+}
+
+.furnitur_offer .s-button-element {
+  max-width: 250px !important;
+  border-radius: 0.5rem;
+}
+
+.furnitur_offer
+  .s-slider-container
+  .swiper-wrapper
+  .swiper-slide.swiper-slide-active
+  img {
+  object-fit: contain !important;
+}
+
+.furnitur_offer img {
+  border-radius: 16px !important;
+  object-fit: contain !important;
+  max-height: 500px;
+}
+
+.products-1 .s-slider-block__title {
+  display: none !important;
+}
+
+.furnitur_offer .flex > div {
+  background-color: transparent !important;
+     
+}
+
+.furnitur_offer h1 {
+  line-height: 1.6 !important;
+  margin-bottom: 1rem;
+}
+
+.furnitur_offer salla-add-product-button {
+  margin-top: 2rem !important;
+}
+
+salla-slider#thumbs {
+    align-items: self-start;
+}
+section.not-show.furnitur_offer {
+    max-height: 800px;
+    overflow: hidden;
+}
+.rooms .s-slider-container .s-slider-swiper-wrapper .swiper-slide img {
+   
+    object-fit: cover;
+}
+.furnitur_offer .s-slider-thumbs {
+    width: 30%;
+    margin: 0;
+}
+
+
+
+/* spical prouducts 3 pics */
+
+.spicial-prodcuts h1{
+color:white !important;
+}
+
+
+
+/* Fixed banner الصورتين */
+/*-----------------------------------------*/
+
+.fixed-t h1, .fixed-t a, .fixed-t button {
+  color: white !important;
+  border-color: white !important;
+}
+
+.fixed-t h1 {
+  width: 495px !important;
+}
+
+.fixed-t > div > div > div {
+  top: unset;
+  left: unset;
+  bottom: 5%;
+}
+
+
+
+/* Product Slider Card */
+/*-----------------------------------------*/
+.s-products-slider-card.swiper-slide {
+  min-width: 200px;
+}
+
+/* information about us المعلومات */
+/*-----------------------------------------*/
+.media > div {
+  background-color: #C6D1DA;
+  max-width: 100% !important;
+  clip-path: unset !important;
+}
+
+/*best of services مميزات الموقع  */
+/*-----------------------------------------*/
+.features {
+  margin-top:50px;
+}
+.features > div > div {
+  flex-direction: row;
+}
+
+.features > div > div > div > div:last-of-type {
+  justify-content: start !important;
+}
+
+/* Footer Section */
+/*-----------------------------------------*/
+.store-footer__inner {
+  background-color: #332941 !important;
+  color: white !important ;
+}
+
+
+footer * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: white !important ;
+}

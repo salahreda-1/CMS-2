@@ -1,0 +1,36 @@
+var overlay = '<div class="overlay">' +
+        '<div class="popup-container" id="popupContainer">' +
+          '<div class="popup-header">' +
+            '<button id="closeButton">×</button>' +
+          '</div>' +
+          '<div class="popup-content">' +
+            '<h2>🎉 هدية لك! خصم خاص لمدة 15 يوم فقط، انسخ الكود واستخدمه الآن قبل انتهاء العرض!</h2>' +
+            '<textarea id="codeContent" readonly>' +
+              'TG10' +
+            '</textarea>' +
+            '<button id="copyButton">اضغط لنسخ الكود واستخدامه الآن</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    document.body.insertAdjacentHTML("afterbegin", overlay);
+
+    function hidePopup() {
+      var overlay = document.querySelector('.overlay');
+      if (overlay) {
+        overlay.style.display = "none";
+      }
+    }
+
+    function copyCode() {
+      var codeContent = document.getElementById('codeContent');
+      if (codeContent) {
+        codeContent.select();
+        document.execCommand("copy");
+        alert("✅ تم نسخ كود الخصم بنجاح! استخدمه الآن قبل انتهاء العرض. 🛍️");
+        hidePopup();
+      }
+    }
+
+    document.getElementById('closeButton').addEventListener('click', hidePopup);
+    document.getElementById('copyButton').addEventListener('click', copyCode);

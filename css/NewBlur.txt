@@ -1,0 +1,85 @@
+/* Add custom CSS styles below */ 
+
+/* logo-------------------- */ 
+.navbar-brand img:not(.fixed-pinned .navbar-brand img) {
+display:none;
+    
+}
+
+#mainnav .container:not(.fixed-pinned .container ) {
+margin-left:0 !important;
+}
+
+.main-nav-container.fixed-pinned .navbar-brand img {
+    max-height: 100px;
+      max-width: 90px;
+}
+
+/*---------------------------*/
+/* categories -------------------- */ 
+.cat:nth-of-type(5) {
+display:none;
+}
+.cat:nth-of-type(6) {
+display:none;
+}
+
+.banner-images .content-image{
+gap: 91px;
+    justify-content: center;
+}
+/*---------------------------*/
+/*gif -------------------- */ 
+
+.gif-video {
+    left: -9% !important;
+}
+.gif-video video {
+    max-width: 100%;
+    height: 690px !important;
+}
+.gif-banner * {color: #fff !important;}
+.gif-banner .first-bg {
+    background-color: #183065 !important;
+}
+.gif-banner a {
+    background-color: #ffffff !important;
+}
+.gif-banner a span {
+    color: #183065 !important;
+}
+
+@media(max-width:768px){
+.landing-page-fixed-bannar p {
+    left: -145px !important;
+}
+}
+/*---------------------------*/
+
+@media(max-width:768px){
+.products-item h3{
+    font-size: 16px!important ;
+}
+}
+
+@media (max-width: 600px) {
+    .numbers .products {
+        grid-template-columns: repeat(2, minmax(160px, 2fr));
+    }
+}
+
+.products-item h2 {
+    color: #163a5f !important;
+}
+
+
+footer * {
+    color: #000;
+}
+footer > div {
+   background-color: #ffffff !important;
+}
+.store-footer__inner {
+    background-color: #ffffff !important;
+   
+}

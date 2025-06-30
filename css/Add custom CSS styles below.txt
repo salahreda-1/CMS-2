@@ -1,0 +1,157 @@
+/* Add custom CSS styles below */ 
+/*MainBanner-------------------------------------------------*/
+/* بيشيل صورة الخصم  */ 
+.pro_addit,.dis_background {
+display:none!important;
+}
+
+/* بيظبط مكان الصورة علي الباك جراوند */
+.main-img .pro_image {
+    left: -4% !important;
+    top: 9% !important;
+}
+@media(max-width:768px){
+.main-img .pro_image {
+    left: 9% !important;
+    top: -25% !important;
+}
+}
+/* بيظبط الباك جراوند لو مش مظبوطة */
+.main-img .pro_background {
+    position: absolute;
+    width: 70% !important;
+}
+
+
+
+@media(min-width:768px){
+.category {
+    padding: 12px;
+    /* justify-content: space-between !important; */
+}
+}
+
+
+@media(min-width:768px){
+ .slider-image-8  .text-wrapper {
+  margin-left: 55% !important;
+  margin-right: auto !important;
+  text-shadow: 1px 1px 2px white;
+  margin-top: 90px;
+}
+}
+ .slider-image-8  h1 {
+color:#FFF;
+}
+
+
+@media (max-width: 490px) {
+    .slider-image .slider-text .text-wrapper {
+        max-width: 100%;
+        text-align: center;
+        background-color: #ffffff73;
+        border-radius: 20px;
+        padding: 8px;
+    }
+    
+ 
+}
+
+@media(max-width:768px){
+   .s-product-card-entry .s-product-card-image {
+    height: 70% !important;
+    border-radius: 4px;
+}
+}
+
+
+
+
+footer * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media(min-width:1024px){
+footer .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+
+footer * {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .grid > div {
+    grid-column: span 1 / span 1 ;
+}
+
+.footer-bottom {
+    background-color: rgb(255 255 255);
+    
+}
+.footer-bottom p {
+    color:#000 !important;
+    
+}
+
+
+
+/*footer end*/
+.featuers_store {max-width: 90%!important;}
+.featuers_store .feature {
+    padding: 20px;
+    background-color: #723c12;
+    /* color: #fff !important; */!i;!;
+}
+.featuers_store h2 ,.featuers_store p {
+color:#fff !important;
+}
+.grid-container.another-style .text-content {
+    right: 9% !important;
+}
+
+
+
+
+.offer-bar-preview17697 {
+display:none !important;
+}
+.grid-item .offer img {
+  
+    display: none !important;
+}
+.VisitorsCounter17698 {
+display:none!important;
+}
+
+.slider-image .slider-text .text-wrapper .head-title {
+  
+    line-height: 1.5 !important;
+}
+
+.s-product-card-image {
+   
+    background-color: rgb(255 255 255) !important;
+}
+@media(max-width:768px){
+.featuers_store{
+display: none;
+   }
+.swiper-wrapper {
+justify-content: start;
+ }
+}
+
+.store-footer__inner .s-contacts::after {
+    content: "";
+    display: block;
+    background-image: url('https://cdn.salla.sa/form-builder/0mlzzlnqLapDm3sr0t9xJ6vZ9W4bMxxN55G88rVk.png'); /* Replace with your logo URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;  /* Set your desired width for the logo */
+    height: 200px;  /* Set your desired height for the logo */
+    margin: 20px auto 0; /* Centers the logo and gives space from the heading */
+}

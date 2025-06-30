@@ -1,0 +1,7 @@
+let name = "منصة عوائد ";
+let link = "https://awaeed.com/";
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".copyright-text p").innerHTML = `صنع بحب على | 
+  <a href="${link}">${name}</a>`;
+});

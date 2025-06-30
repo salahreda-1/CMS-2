@@ -1,0 +1,372 @@
+:root{
+  --bg-clr: #1b56d5
+}
+
+.main-menu>li>a[href*=offer] {
+
+    color: #1b56d5;
+}
+
+
+body {
+  background-color: #191919 !important;
+}
+
+h4.s-product-card-price {
+    color: #fff;
+}
+.index:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #e5e8ed;
+  position: fixed;
+  top: 0;
+  z-index: 99999999999999999 !important;
+  background-size: 250px !important;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  animation-name: logobg;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@keyframes logobg {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+section.s-block.s-block--photos-slider .s-slider-block__title-nav,
+.s-slider-block__title-right h2 {
+  display: none !important;
+}
+
+#mainnav,
+.inner,
+.sub-menu {
+  background: #170e1b !important;
+}
+
+#mainnav,
+#mainnav i:before,
+#mainnav b,
+h2,
+h1 {
+  color: #fff!important;
+}
+
+/* Unset Raeed Carousel */
+
+.s-block:nth-of-type(1) {
+  margin-top: 0 !important;
+}
+
+section.s-block.s-block--photos-slider * {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+salla-slider.photos-slider .swiper-slide {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+.s-reviews-testimonial {
+    background-color: #000;
+}
+.s-reviews-testimonial__text *{
+  color: #fff
+}
+
+
+/* Categories Grid */
+
+.s-block--banners .grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.s-block--banners .banner-entry {
+  height: 300px;
+}
+
+
+@media (max-width: 992px) {
+  .s-block--banners .banner-entry {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .s-block--banners .banner-entry {
+    height: 90px;
+  }
+}
+
+.s-block--banners .lazy__bg {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 640px) {
+  .two-row .banner-entry:first-child {
+    grid-row: span 1 / span 1;
+  }
+}
+
+/* Products */
+
+.s-block__title {
+    justify-content: center;
+}
+
+
+@media(min-width:1200px){
+
+.s-block__title h2{
+  font-size: 2rem
+}
+
+.s-block__title h2:before,
+.s-block__title h2:after{
+    content: url(https://i.ibb.co/kxVGK4t/1.png);
+    margin: 0 1rem
+}
+
+.s-block__title h2:after{
+  content: url(https://i.ibb.co/N9B4xHy/2.png);
+}
+}
+
+.s-product-card-entry {
+    background-color: #241C2E;
+}
+
+.s-product-card-content-title a,
+.s-product-card-sale-price *,
+.s-product-card-sale-price h4{
+  color: #fff !important
+}
+
+section#featured-products-style2-2 {
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  .s-products-slider-card {
+    width: 60%;
+  }
+}
+
+.index .s-button-wide {
+  max-width: 200px !important;
+  display: block;
+  margin: auto;
+}
+
+.s-button-element:not(.s-product-card-wishlist-btn) {
+    border-color: #1b56d5;
+    background: #1b56d5;
+    color: #fff !important;
+    border-radius: 3rem;
+}
+
+
+.s-product-card-vertical .s-product-card-wishlist-btn button:hover {
+  background-color: var(--color-primary) !important;
+}
+
+.s-product-card-vertical
+  .s-product-card-wishlist-btn
+  button:hover
+  .sicon-heart {
+  color: #fff !important;
+}
+
+/* Transparent Banner */
+
+.banner-entry,
+.banner--fixed img {
+  background-color: transparent !important;
+}
+
+/* Footer */
+
+@media(min-width:1024px){
+footer .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+
+footer * {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .grid > div {
+    grid-column: span 1 / span 1 ;
+}
+
+
+
+
+.copyright-text *{
+  color: #fff !important
+}
+
+
+@media (min-width: 992px) {
+  footer img[alt="Logo"] {
+    grid-column: span 2 / span 2;
+  }
+}
+.s-contacts-icon {
+  border-color: var(--primary-clr);
+}
+
+
+ 
+
+.banner-entry > div {
+  background-repeat: no-repeat;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.banner-entry > div:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.banner-entry > div:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+.banner-entry > div:active:after {
+  opacity: 0;
+}
+
+.banner-entry > div:hover {
+  transform: scale(0.9);
+}
+
+/* Category Page */
+
+.s-breadcrumb-item,
+h1#page-main-title,
+label {
+  color: #fff;
+}
+
+.s-breadcrumb-arrow svg {
+  stroke: var(--color-primary);
+  color: #fff;
+}
+
+select#product-filter {
+  background: var(--bg-clr) !important;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Product Page */
+
+.product__description *,
+.main-content h1,
+.main-content b,
+.main-content label {
+  color: #fff !important;
+}
+
+.product__description strong {
+  color: #f00 !important;
+}
+
+.product__description * {
+  background-color: var(--bg-clr);
+}
+
+.main-content h2 {
+  color: #fff;
+}
+.main-content *:not(button) {
+  background: transparent !important;
+  color: #fff
+}
+
+select.s-form-control {
+    background: rebeccapurple !important;
+}
+
+
+
+.mb-4.flex.justify-between.sm\:grid.sm\:grid-cols-3.bg-white.rounded-md.px-4.py-2 {
+  color: #fce07c;
+}
+
+.s-quantity-input-container {
+  border-color: var(--color-primary);
+}
+
+.s-quantity-input-container svg path {
+  fill: var(--color-primary);
+}
+
+.s-quantity-input-input {
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.s-comments-product{
+  background-color: transparent !important
+}
+.s-comments-item-user-wrapper * {
+    color: #fff;
+}
+button.btn-tab.btn--collapse {
+    background: #000;
+}
+
+/* Cart Page */
+
+.item-price {
+  color: #fff !important;
+}
+
+.shadow-default.bg-white.p-5.xs\:p-7.rounded-md.mb-5.relative.transition-height.duration-1000 {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--color-primary);
+}

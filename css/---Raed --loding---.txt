@@ -1,0 +1,276 @@
+/* -------------loding--------------- */ 
+.index:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff url("https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/ePOgrB/7T5O5AcjgF0pnGWjM41kxt2z98YLU9a2vhvsLauw.png");
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9 !important;
+  background-size: 250px !important;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  animation-name: logobg;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes logobg {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/* Add custom CSS styles below */ 
+
+/* Floating Navbar */
+@media(min-width:1024px){
+  .index div#mainnav {
+    position: absolute;
+    width: 90%;
+    z-index: 2;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%, 0);
+    border-radius: 2rem;
+  }
+  .inner{
+    border-radius:2rem
+  }
+}
+
+#mainnav,
+.inner,
+.sub-menu {
+  background: #81477824 !important;
+}
+
+#mainnav,
+#mainnav i:before,
+#mainnav b {
+  color: white !important;
+}
+
+.inner {
+  background-color: #fff;
+}
+.main-menu li.root-level > a {
+  color: white;
+}
+
+.main-nav .icon {
+color: black;}
+
+
+.s-cart-summary-total {
+  color: #2C1A06;
+}
+
+.navbar-brand img {
+  max-height: 4rem;
+  max-width: 180px !important;
+ 
+}
+
+/*swiper photos start*/
+
+.s-block--photos-slider .swiper-slide {
+  width: 100% !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.s-block--photos-slider {
+  margin-top: 0px !important;
+}
+.swiper {
+  padding: 0px !important;
+}
+/*swiper photos end*/
+
+/*titles*/
+.s-products-slider-wrapper h2{
+display:none
+  
+}
+
+
+/*grid start*/
+
+
+.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.banner-entry .lazy__bg {
+  background-size: contain;
+
+  background-repeat: no-repeat;
+}
+
+.banner-entry {
+  height: 400px !important;
+  background-color: transparent;
+}
+@media (max-width: 768px) {
+  ..md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+ 
+}
+}
+
+@media (max-width: 768px) {
+  .banner-entry {
+    background-color: transparent;
+     height: 150px !important;
+  }
+}
+
+/*grid end*/
+
+/*slider card start*/
+
+.s-products-slider-card.swiper-slide {
+  width: 50%;
+}
+
+.s-products-slider-card.swiper-slide {
+  margin-bottom: 30px;
+}
+
+.s-block--photos-slider .s-slider-block__title-nav {
+  display: none;
+}
+
+/*slider card button  start*/
+.s-product-card-entry .s-button-element  {
+  background-color: #702265 !important;
+}
+button.undefined {
+  color: white;
+}
+.s-button-primary {
+  background-color: #702265 !important;
+
+
+}
+
+.s-product-card-content-title a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*slider card button end*/
+
+/*slider card end*/
+
+.banner--fixed img {
+  background-color: transparent;
+}
+
+
+
+@media(min-width:768px){
+section:nth-child(6 of section.s-block--fixed-banner) {
+    margin-bottom: -120px;
+    z-index: 1;
+}
+}
+
+/*footer start*/
+.store-footer__inner {
+  background-image:url("https://cdn.salla.sa/form-builder/XuIGoaICj0jEFuWrEGwuAxCXC8BDQJKpEM24NIi4.png") !important;
+  color: white;
+  height:350px!important;
+}
+
+footer * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*footer end*/
+
+/*animations*/
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.s-product-card-entry {
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+
+/* Hover Effect */
+
+.banner-entry > div {
+  background-repeat: no-repeat;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.banner-entry > div:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.banner-entry > div:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+.banner-entry > div:active:after {
+  opacity: 0;
+}
+
+.banner-entry > div:not(:hover) {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+

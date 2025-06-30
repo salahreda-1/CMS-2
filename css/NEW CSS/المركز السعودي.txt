@@ -1,0 +1,58 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // 1. Select the footer grid container
+  const gridContainer = document.querySelector('footer .container.grid');
+  if (!gridContainer) {
+    console.error('🛑 Footer grid container not found');
+    return;
+  }
+
+  // 2. Get the last <div> inside the grid container
+  const gridColumns = gridContainer.querySelectorAll(':scope > div');
+  const lastColumn = gridColumns[gridColumns.length - 1];
+
+  if (!lastColumn) {
+    console.error('🛑 No columns found in the footer grid');
+    return;
+  }
+
+  // 3. Create the clickable badge <a><div></div></a>
+  const link = document.createElement('a');
+  link.href = 'https://business.sa/';
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.style.display = 'block';
+  link.style.margin = '10px auto';
+  
+
+
+  const badge = document.createElement('div');
+  Object.assign(badge.style, {
+    width: '180px',
+    height: '100px',
+    backgroundImage: "url('https://cdn.salla.sa/form-builder/43kmPpdkdm5okAWXlSGJbpqkcKTIatmw6XQ9KzPS.png')",
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    cursor: 'pointer'
+  });
+
+  link.appendChild(badge);
+
+  // 4. Create the <h1> element (AFTER the badge)
+  const heading = document.createElement('h1');
+  heading.textContent = 'موثوقون لدى وزارة التجارة والمركز السعودي للأعمال';
+  heading.style.textAlign = 'center';
+  heading.style.fontSize = '15px';
+  heading.style.margin = '10px 0';
+  heading.style.direction = 'rtl';
+  heading.style.color = '#fff';
+  
+  
+  
+
+  // 5. Append badge first, then heading
+  lastColumn.appendChild(link);
+  lastColumn.appendChild(heading);
+
+  console.log('✅ Badge and heading added after badge in the last footer column');
+});
