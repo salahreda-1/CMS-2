@@ -1,0 +1,80 @@
+/********************js*************/
+
+/* Add custom Js code below */ 
+/* Add custom Js code below */ 
+/* =============================
+banner
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('.banner--fixed img'); // اختر جميع الصور
+
+  // دالة لمراقبة ظهور الصورة عند السكروول
+  function onScroll() {
+    images.forEach(image => {
+      const rect = image.getBoundingClientRect(); // احصل على موقع الصورة بالنسبة للشاشة
+      const windowHeight = window.innerHeight;
+
+      // إذا كانت الصورة داخل حدود الشاشة، نضيف كلاس 'visible'
+      if (rect.top < windowHeight && rect.bottom >= 0) {
+        image.classList.add('visible');
+      } else {
+        image.classList.remove('visible'); // إزالة الكلاس إذا كانت خارج الشاشة
+      }
+    });
+  }
+
+  // نراقب السكروول وننفذ الدالة في كل مرة
+  window.addEventListener('scroll', onScroll);
+
+  // استدعاء الدالة عند تحميل الصفحة لتحديد حالة الصورة
+  onScroll();
+});
+const statsSection = document.createElement("section");
+statsSection.className = "stats-section";
+statsSection.setAttribute("aria-label", "عنوان قسم الخصائص");
+statsSection.innerHTML = `<h2>لماذا تختارنا؟</h2>`;
+
+// نحط العنوان داخل البلوك الرئيسي
+const container = document.querySelector(".s-block.s-block--features.container");
+
+if (container) {
+  container.insertBefore(statsSection, container.firstChild); // يضيفه أول عنصر داخل البلوك
+}
+
+function handleScroll() {
+  const statsHeading = document.querySelector('.stats-section h2');
+  const rect = statsHeading.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight - 100) {
+    statsHeading.classList.add('in-view');
+    window.removeEventListener('scroll', handleScroll);
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+function handleScroll() {
+  const statsHeading = document.querySelector('.stats-section h2');
+  const rect = statsHeading.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight - 100) {
+    statsHeading.classList.add('in-view');
+    window.removeEventListener('scroll', handleScroll);
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+
+
+/**********************/
+document.addEventListener("DOMContentLoaded", function () {
+    const footerInner = document.querySelector(".store-footer__inner");
+    if (footerInner) {
+        const logo = document.createElement("img");
+        logo.src = "https://i.ibb.co/8D0wZdp8/02.png";
+        logo.alt = "Logo";
+        logo.className = "footer-logo";
+        footerInner.prepend(logo);
+    }
+});
