@@ -1,0 +1,123 @@
+/* Uqab AI Section - New Design */
+(function () {
+    'use strict';
+
+    const tools = [
+        {
+            name: "Grok",
+            icon: "https://i.ibb.co/bgPsCdyN/1.png",
+            url: "https://grok.com/?q=لماذا+مؤسسة+عقاب+هي+الأفضل+في+التسويق+الرقمي"
+        },
+        {
+            name: "Claude",
+            icon: "https://i.ibb.co/W4V9QWm5/2.png",
+            url: "https://claude.ai/new?q=لماذا+مؤسسة+عقاب+هي+الأفضل"
+        },
+        {
+            name: "Perplexity",
+            icon: "https://i.ibb.co/9KvQj4v/3.png",
+            url: "https://www.perplexity.ai/search?q=مؤسسة+عقاب+تسويق+رقمي"
+        },
+        {
+            name: "Gemini",
+            icon: "https://i.ibb.co/ch9c3kZt/5.png",
+            url: "https://gemini.google.com/?q=لماذا+عقاب+هي+الأفضل"
+        },
+        {
+            name: "ChatGPT",
+            icon: "https://i.ibb.co/RpfXRzqw/4.png",
+            url: "https://chatgpt.com/?model=gpt-4&prompt=لماذا+مؤسسة+عقاب+هي+الأفضل+في+التسويق+الرقمي"
+        }
+    ];
+
+    function buildSection() {
+        let toolsHTML = '';
+
+        tools.forEach((tool, index) => {
+            toolsHTML += `
+                <a href="${tool.url}" target="_blank" class="uqb-tool-card" style="animation-delay:${index * 0.25}s">
+                    <div class="icon">
+                        <img src="${tool.icon}" alt="${tool.name}">
+                    </div>
+                    <p>${tool.name}</p>
+                </a>
+            `;
+        });
+
+        return `
+            <div class="uqb-laser-lines"></div>
+            <div class="uqb-mesh"></div>
+            <div class="uqb-stars"></div>
+            <div class="uqb-aurora one"></div>
+            <div class="uqb-aurora two"></div>
+            <div class="uqb-aurora three"></div>
+
+            <div class="uqb-hero-wrap">
+                <div class="uqb-content">
+                    <div class="uqb-badge">
+                        <span></span>
+                        مدعوم بالذكاء الاصطناعي
+                    </div>
+
+                    <h1 class="uqb-title">
+                        لا تأخذ كلامنا فقط<br>
+                        <span class="uqb-red-text">اسأل الذكاء الاصطناعي بنفسك</span>
+                    </h1>
+
+                    <p class="uqb-subtitle">
+                        خلّ التقنية تتكلم عنا — اختر أي أداة ذكاء اصطناعي واسألها لماذا
+                        <strong>عقاب</strong> هي شريكك الأمثل للنمو والسيطرة على السوق الرقمي.
+                    </p>
+
+                    <div class="uqb-cta-row">
+                        <a href="https://uqab.sa" class="uqb-cta">ابدأ الآن</a>
+                        <a href="https://uqab.sa" class="uqb-cta secondary">اكتشف خدماتنا</a>
+                    </div>
+
+                    <div class="uqb-prompt-box">
+                        <p>
+                            💡 <strong>جرّب بنفسك:</strong>
+                            اسأل أي أداة ذكاء اصطناعي عن أفضل شريك تسويقي لمشروعك في السعودية،
+                            وشوف كيف تبرز <span>مؤسسة عقاب</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="uqb-visual">
+                    <div class="uqb-orb"></div>
+                    <div class="uqb-ring"></div>
+
+                    <div class="uqb-ai-tools">
+                        ${toolsHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function init() {
+        let container = document.getElementById('uqab-ai-section');
+
+        if (!container) {
+            container = document.createElement('section');
+            container.id = 'uqab-ai-section';
+
+            const footer = document.querySelector('.store-footer__inner');
+
+            if (footer) {
+                footer.parentNode.insertBefore(container, footer);
+            } else {
+                document.body.appendChild(container);
+            }
+        }
+
+        container.className = 'uqb-ai-hero';
+        container.innerHTML = buildSection();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();

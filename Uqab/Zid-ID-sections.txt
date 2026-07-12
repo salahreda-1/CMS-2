@@ -1,0 +1,83 @@
+
+
+<style>
+@media(min-width:768px){
+.zid-gallery-3{
+
+    display: none;
+}
+.zid-gallery-5{
+    display: none;
+}
+}
+@media(max-width:767px){
+.zid-gallery-2{
+
+    display: none;
+}
+.zid-gallery-4{
+    display: none;
+}
+}
+</style>
+
+
+
+<script>
+(function () {
+  function markZidDivs() {
+    const allDivSections = Array.from(
+      document.querySelectorAll('div[section-id], div.gallery-section, div.section-padding-space')
+    );
+
+    allDivSections.forEach(function (div, index) {
+      // نشيل أي ترقيم قديم
+      div.classList.forEach(function (className) {
+        if (/^zid-section-\d+$/.test(className)) {
+          div.classList.remove(className);
+        }
+      });
+
+      // نضيف كلاس جديد
+      div.classList.add('zid-section-' + (index + 1));
+      div.setAttribute('data-zid-section', index + 1);
+    });
+
+    const galleryDivs = Array.from(
+      document.querySelectorAll('div.gallery-section')
+    );
+
+    galleryDivs.forEach(function (div, index) {
+      // نشيل أي ترقيم قديم للجاليري
+      div.classList.forEach(function (className) {
+        if (/^zid-gallery-\d+$/.test(className)) {
+          div.classList.remove(className);
+        }
+      });
+
+      // نرقم سكاشن الجاليري بس
+      div.classList.add('zid-gallery-' + (index + 1));
+      div.setAttribute('data-zid-gallery', index + 1);
+    });
+
+    console.log('Zid div sections numbered:', allDivSections);
+    console.log('Zid gallery divs numbered:', galleryDivs);
+  }
+
+  document.addEventListener('DOMContentLoaded', markZidDivs);
+  window.addEventListener('load', markZidDivs);
+
+  setTimeout(markZidDivs, 500);
+  setTimeout(markZidDivs, 1500);
+  setTimeout(markZidDivs, 3000);
+
+  const observer = new MutationObserver(function () {
+    setTimeout(markZidDivs, 300);
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>

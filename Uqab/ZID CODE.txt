@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800&display=swap");
+@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css");
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: #fff !important;
+}
+
+
+/* --------------------------------- */
+nav#sliding-menu,
+.slide-menu,
+.slide-menu ul,
+.main-nav {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.header-theme-bg-primary .container,
+.header-theme-bg-primary .container-fluid,
+.header-theme-bg-primary .row {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
+/* ---------------------------------- */
+.icon-shopping_cart_black_36dp-1-1 .path2:before {
+    color: #FFFFFF !IMPORTANT;
+}
+
+ul.main-nav li.all-categories {
+  display: none !important;
+}
+
+.header-cart {
+  color: #ffff;
+}
+
+.header-theme-bg-primary {
+  background-color: #002863;
+  border-bottom: 1px solid#fff;
+}
+.account-lang-currency.upper-bar.header-theme-bg-primary.header-theme-text-for-primary-bg {
+    display: none;
+}
+
+.sticky .header-theme-bg-primary {
+  border-radius: 0 0 50px 50px;
+}
+
+.search-input-input
+{
+  border: 1px solid#fff;
+  border-radius: 15px;
+}
+nav#sliding-menu {
+    background: #fff;
+}
+.slide-menu ul {
+    background: #fff;
+    color: #002863;
+}
+.upper-bar * {
+    color: white;
+    border-color: white !important;
+}
+
+/* .header-cart .icon-shopping_cart_black_36dp-1-1 .path1:before {
+  opacity: 0;
+}
+
+.header-cart .icon-shopping_cart_black_36dp-1-1 .path2:before {
+  content: "\f291 ";
+  font-family: FontAwesome;
+  color: #122142;
+} */
+
+@media (min-width: 767px) {
+  .header-logo,
+  .header-cart {
+    order: 2 !important;
+    width: 33.3%;
+    justify-content: space-around !important;
+  }
+
+  .header-logo a {
+    height: 10rem !important;
+  }
+}
+
+.dark.d-none.d-lg-block {
+  background: #002863;
+}
+
+ul.main-nav > li > a {
+  color: #fff !important;
+}
+
+/* ul.main-nav > li:first-child {
+  display: none !important;
+} */
+
+
+.container.container-slider {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.main-slider {
+    box-sizing: content-box;
+    width: 100%;
+    overflow-y: hidden;
+    max-height: 945px !important;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+    max-height: 945px;
+}
+.slick-slide img {
+    object-fit: fill !important;
+}
+.prod-col {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.product-item {
+  box-shadow: 0 1px 3px #ddd;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden !important;
+}
+
+.product-item * {
+  text-align: center;
+}
+
+.product-crd-spec {
+  min-height: 50px !important;
+}
+
+.product-card-add-to-cart {
+  padding: 7px 35px;
+  background-color: #2171f6 !important;
+  color: white !important;
+  font-size: 14px;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  margin-right: auto;
+  border-radius: 0 15px 0 0;
+  position: relative;
+}
+.product-card-add-to-cart:before { position: absolute; content: "\f00e "; font-family: fontawesome; color: #122142 ; font-size: 17px; display: inline-block; right: -50px; transform: translateX(-50%); } a.btn.btn-primary.btn-product-card-select-variant { padding: 7px 35px; background-color: #122142 !important; color: white !important; font-size: 14px; border: 0; display: flex; justify-content: center; width: 65%; margin-right: auto; border-radius: 0 15px 0 0; position: relative; } a.btn.btn-primary.btn-product-card-select-variant:before{ position: absolute; content: "\f00e "; font-family: fontawesome; color: #122142 ; font-size: 17px; display: inline-block; right: -50px; transform: translateX(-50%); }
+
+.product-item small {
+    display: none;
+}
+.product-item .product-price,
+.slick-next.slick-arrow > span,
+.slick-prev.slick-arrow > span {
+  color: #002863 !important;
+}
+
+h2.section-title {
+  margin-bottom: 2rem;
+  position: relative;
+  display: table;
+  color: #2172f7 !important;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h2.section-title:before {
+  content: "";
+  width: 350px;
+  height: 2px;
+  background-color: #2172f7;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+a.more-button {
+  background: #002863;
+  color: #fff;
+  border: 0;
+  box-shadow: 0 1px 3px #ddd;
+  border-radius: 50px;
+}
+
+.features-section {
+  background: transparent;
+  justify-content: space-evenly !important;
+}
+
+.features-section-img {
+  background: transparent !important;
+}
+
+.features-section p {
+  color: #002863;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-store-section {
+  background: #2172f7;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .header-theme-bg-primary * {
+    color: #ffffff;
+  }
+
+  .search-header .image-logo {
+    padding: 0;
+  }
+
+  .product-item {
+    width: 180px !important;
+  }
+
+  .footer-store-section * {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+h3.cart-header-total {
+  color: #002863;
+}
+
+.header-cart {
+  justify-content: center !important;
+    color: #002863;
+}
+
+.features-section-img {
+  max-height: 200px !important;
+  max-width: 200px !important;
+}
+.partners-slider-wrapper .slick-slide img {
+  display: block;
+  background: #002863;
+  border-radius: 20px;
+  padding: 19px;
+  max-width: 139px !important;
+  max-height: 150px !important;
+}
+@media (max-width: 768px) {
+  .partners-slider .partners-item {
+    vertical-align: middle;
+    background: #002863;
+    padding: 7px;
+    border-radius: 15px;
+  }
+}
+
+.slick-list .prod-col.slick-slide {
+  transition: 0.3s;
+}
+.slick-list .prod-col.slick-slide:hover {
+  transform: scale(1.03);
+}
+.store-section a {
+  color: white !important;
+}
+
+.store-section .social-icons span {
+  color: white !important;
+  border: 2px solid #ffffff !important;
+}

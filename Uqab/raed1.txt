@@ -1,0 +1,716 @@
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --bg: #fff;
+    --header-bg: #000;
+    --header-color: var(--color-primary);
+    --feat-bg: #000;
+    --feat-color: #fff;
+    --footer-bg: #ffF;
+}
+
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    background-color: var(--bg) !important;
+}
+
+
+/* =========================
+   Header / Navbar
+========================= */
+@media (min-width: 992px) {
+    .navbar-brand img {
+        max-height: 4rem;
+    }
+
+    .main-nav-container.fixed-pinned .navbar-brand img {
+        max-height: 70px;
+    }
+}
+
+.navbar-brand img {
+    max-height: 7rem !important;
+    max-width: 180px !important;
+}
+
+#mainnav,
+#mainnav i:before,
+#mainnav b {
+    color: #42442e !important;
+}
+
+#mainnav a:hover {
+    color: var(--header-color) !important;
+    opacity: 0.7;
+}
+
+#mainnav i {
+    border: unset !important;
+}
+
+.main-nav-container.fixed-pinned .main-menu > li > a {
+    padding-bottom: 0;
+    padding-top: 40px;
+}
+
+
+/* =========================
+   Header Icons
+========================= */
+.sicon-shopping-bag:before {
+    content: "\ef39" !important;
+}
+
+.sicon-user-circle:before {
+    content: "\f078";
+}
+
+
+/* =========================
+   Carousel / Photos Slider
+========================= */
+.s-block:nth-of-type(1) {
+    margin-top: 0 !important;
+}
+
+.s-block--photos-slider .s-slider-block__title-nav {
+    display: none !important;
+}
+
+.s-block--photos-slider * {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    width: 100%;
+}
+
+.s-block--photos-slider .swiper-slide {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+}
+
+
+/* =========================
+   Categories / Banners Grid
+========================= */
+.s-block--banners .grid {
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    max-width: 100%;
+    margin: auto;
+}
+
+.s-block--banners .banner-entry {
+    height: 400px;
+}
+
+.s-block--banners .lazy__bg {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+    .s-block--banners .banner-entry {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .s-block--banners .grid {
+        grid-template-columns: repeat(1, minmax(0px, 1fr));
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .s-block--banners .banner-entry {
+        height: 350px;
+    }
+}
+
+@media (min-width: 640px) {
+    .two-row .banner-entry:first-child {
+        grid-row: span 1 / span 1;
+    }
+}
+
+
+/* =========================
+   Banner Transparency
+========================= */
+.banner-entry,
+.banner--fixed img {
+    background-color: transparent !important;
+}
+
+
+/* =========================
+   Banner Hover Effect
+========================= */
+.banner-entry > div {
+    background-repeat: no-repeat;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.banner-entry > div:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.banner-entry > div:hover:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+
+.banner-entry > div:active:after {
+    opacity: 0;
+}
+
+.banner-entry > div:not(:hover) {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   Products Cards
+========================= */
+body:not(body.product-single) .s-block-tabs .s-button-element:not(.s-product-card-wishlist-btn) {
+    background-color: #42442e !important;
+}
+
+.s-product-card-entry {
+    background-color: transparent !important;
+    border-radius: 0.5rem !important;
+}
+
+.s-product-card-image {
+    background-color: transparent !important;
+}
+
+.s-product-card-entry img {
+    transition: all 0.3s;
+}
+
+.s-product-card-entry:hover img {
+    scale: 1.2;
+}
+
+.slider-bannars-moving h2,
+.s-product-card-content-title {
+    text-align: center !important;
+}
+
+.s-product-card-content-sub {
+    justify-content: center;
+}
+
+.s-product-card-content-title a {
+    color: #000 !important;
+}
+
+body:not(body.product-single)
+    .s-button-element:not(.s-product-card-wishlist-btn) {
+    background: var(--color-primary);
+    color: #fff !important;
+    border-radius: 4px;
+}
+
+.s-product-card-vertical .s-product-card-wishlist-btn button:hover {
+    background-color: var(--color-primary) !important;
+}
+
+.s-product-card-vertical
+    .s-product-card-wishlist-btn
+    button:hover
+    .sicon-heart {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .s-products-slider-card {
+        width: 55%;
+    }
+}
+
+
+/* =========================
+   Section Titles / Special Heading
+========================= */
+.s-slider-block__title h2,
+.s-block__title h2 {
+    font-size: 32px !important;
+    position: relative;
+}
+
+.s-slider-block__title h2:where([dir="rtl"], [dir="rtl"] *) {
+    padding-left: 0rem;
+}
+
+.s-slider-block__title,
+.s-block__title {
+    justify-content: center;
+    padding-bottom: 24px;
+}
+
+.s-slider-block__title-left {
+    display: none;
+}
+
+.s-slider-block__title h2:before,
+.s-block__title h2:before {
+    content: "";
+    background-image: url(https://i.ibb.co/Bpb4VHT/Frame-1000002061.webp);
+    background-repeat: no-repeat;
+    display: block;
+    background-size: contain;
+    width: 110%;
+    height: 40px;
+    transform: translate(10px, 50px);
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width: 1024px) {
+    .s-slider-block__title h2,
+    .s-block__title h2 {
+        font-size: 20px !important;
+    }
+
+    .s-slider-block__title h2:before,
+    .s-block__title h2:before {
+        height: 20px;
+        transform: translate(0px, 35px);
+    }
+}
+
+
+/* =========================
+   PC / Mobile Images Visibility
+========================= */
+@media (min-width: 768px) {
+    .mobilimg {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pcimg {
+        display: none;
+    }
+}
+
+
+/* =========================
+   Features Section
+========================= */
+.s-block--features__item {
+    background-color: rgb(14 52 159) !important;
+}
+
+.s-block--features__item .feature-icon {
+    background-color: #fdfdfd38 !important;
+}
+
+.s-block--features__item h2 {
+    color: rgb(255 255 255) !important;
+}
+
+.s-block--features__item p {
+    color: rgb(255 255 255 / 55%) !important;
+}
+
+
+```css
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --bg: #fff;
+    --header-bg: #000;
+    --header-color: var(--color-primary);
+    --feat-bg: #000;
+    --feat-color: #fff;
+    --footer-bg: #ffF;
+}
+
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    background-color: var(--bg) !important;
+}
+
+
+/* =========================
+   Header / Navbar
+========================= */
+@media (min-width: 992px) {
+    .navbar-brand img {
+        max-height: 4rem;
+    }
+
+    .main-nav-container.fixed-pinned .navbar-brand img {
+        max-height: 70px;
+    }
+}
+
+.navbar-brand img {
+    max-height: 7rem !important;
+    max-width: 180px !important;
+}
+
+#mainnav,
+#mainnav i:before,
+#mainnav b {
+    color: #42442e !important;
+}
+
+#mainnav a:hover {
+    color: var(--header-color) !important;
+    opacity: 0.7;
+}
+
+#mainnav i {
+    border: unset !important;
+}
+
+.main-nav-container.fixed-pinned .main-menu > li > a {
+    padding-bottom: 0;
+    padding-top: 40px;
+}
+
+
+/* =========================
+   Header Icons
+========================= */
+.sicon-shopping-bag:before {
+    content: "\ef39" !important;
+}
+
+.sicon-user-circle:before {
+    content: "\f078";
+}
+
+
+/* =========================
+   Carousel / Photos Slider
+========================= */
+.s-block:nth-of-type(1) {
+    margin-top: 0 !important;
+}
+
+.s-block--photos-slider .s-slider-block__title-nav {
+    display: none !important;
+}
+
+.s-block--photos-slider * {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    width: 100%;
+}
+
+.s-block--photos-slider .swiper-slide {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+}
+
+
+/* =========================
+   Categories / Banners Grid
+========================= */
+.s-block--banners .grid {
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    max-width: 100%;
+    margin: auto;
+}
+
+.s-block--banners .banner-entry {
+    height: 400px;
+}
+
+.s-block--banners .lazy__bg {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+    .s-block--banners .banner-entry {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .s-block--banners .grid {
+        grid-template-columns: repeat(3, minmax(0px, 1fr));
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .s-block--banners .banner-entry {
+        height: 150px;
+    }
+}
+
+@media (min-width: 640px) {
+    .two-row .banner-entry:first-child {
+        grid-row: span 1 / span 1;
+    }
+}
+
+
+/* =========================
+   Banner Transparency
+========================= */
+.banner-entry,
+.banner--fixed img {
+    background-color: transparent !important;
+}
+
+
+/* =========================
+   Banner Hover Effect
+========================= */
+.banner-entry > div {
+    background-repeat: no-repeat;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.banner-entry > div:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.banner-entry > div:hover:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+
+.banner-entry > div:active:after {
+    opacity: 0;
+}
+
+.banner-entry > div:not(:hover) {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   Products Cards
+========================= */
+body:not(body.product-single) .s-block-tabs .s-button-element:not(.s-product-card-wishlist-btn) {
+    background-color: #42442e !important;
+}
+
+.s-product-card-entry {
+    background-color: transparent !important;
+    border-radius: 0.5rem !important;
+}
+
+.s-product-card-image {
+    background-color: transparent !important;
+}
+
+.s-product-card-entry img {
+    transition: all 0.3s;
+}
+
+.s-product-card-entry:hover img {
+    scale: 1.2;
+}
+
+.slider-bannars-moving h2,
+.s-product-card-content-title {
+    text-align: center !important;
+}
+
+.s-product-card-content-sub {
+    justify-content: center;
+}
+
+.s-product-card-content-title a {
+    color: #000 !important;
+}
+
+body:not(body.product-single)
+    .s-button-element:not(.s-product-card-wishlist-btn) {
+    background: var(--color-primary);
+    color: #fff !important;
+    border-radius: 4px;
+}
+
+.s-product-card-vertical .s-product-card-wishlist-btn button:hover {
+    background-color: var(--color-primary) !important;
+}
+
+.s-product-card-vertical
+    .s-product-card-wishlist-btn
+    button:hover
+    .sicon-heart {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .s-products-slider-card {
+        width: 55%;
+    }
+}
+
+
+/* =========================
+   Section Titles / Special Heading
+========================= */
+.s-slider-block__title h2,
+.s-block__title h2 {
+    font-size: 32px !important;
+    position: relative;
+}
+
+.s-slider-block__title h2:where([dir="rtl"], [dir="rtl"] *) {
+    padding-left: 0rem;
+}
+
+.s-slider-block__title,
+.s-block__title {
+    justify-content: center;
+    padding-bottom: 24px;
+}
+
+.s-slider-block__title-left {
+    display: none;
+}
+
+.s-slider-block__title h2:before,
+.s-block__title h2:before {
+    content: "";
+    background-image: url(https://i.ibb.co/Bpb4VHT/Frame-1000002061.webp);
+    background-repeat: no-repeat;
+    display: block;
+    background-size: contain;
+    width: 110%;
+    height: 40px;
+    transform: translate(10px, 50px);
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width: 1024px) {
+    .s-slider-block__title h2,
+    .s-block__title h2 {
+        font-size: 20px !important;
+    }
+
+    .s-slider-block__title h2:before,
+    .s-block__title h2:before {
+        height: 20px;
+        transform: translate(0px, 35px);
+    }
+}
+
+
+/* =========================
+   PC / Mobile Images Visibility
+========================= */
+@media (min-width: 768px) {
+    .mobilimg {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pcimg {
+        display: none;
+    }
+}
+
+
+/* =========================
+   Features Section
+========================= */
+.s-block--features__item {
+    background-color: rgb(14 52 159) !important;
+}
+
+.s-block--features__item .feature-icon {
+    background-color: #fdfdfd38 !important;
+}
+
+.s-block--features__item h2 {
+    color: rgb(255 255 255) !important;
+}
+
+.s-block--features__item p {
+    color: rgb(255 255 255 / 55%) !important;
+}
+
+
+/* =========================
+   Footer
+========================= */
+.store-footer{
+    background-color:var(--color-primary) !important;
+} 
+.store-footer__inner {
+    background-color: #fff !important;
+}
+
+@media (min-width: 1024px) {
+    footer .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.copyright-text p,
+.copyright-text p a:hover{
+    color: #fff !important;
+}
+
+
+@media (max-width: 769px) {
+    footer * {
+        margin: 0 auto;
+        text-align: center;
+    }
+}

@@ -1,0 +1,304 @@
+(function () {
+
+function initCustomFeaturesReviews() {
+
+var oldSection = document.getElementById("custom-features-reviews-section");
+if (oldSection) oldSection.remove();
+
+var oldStyle = document.getElementById("custom-features-reviews-style");
+if (oldStyle) oldStyle.remove();
+
+/* ================== المميزات ================== */
+var cardsData = [
+  { img: "https://cdn.files.salla.network/homepage/700639812/1f47d628-71c0-4db5-8a7a-08d66df758b2.webp", text: "وسائل دفع آمنة ومتعددة" },
+  { img: "https://cdn.files.salla.network/homepage/700639812/f6df9323-c5dd-438d-a439-3e2f167cbe4a.webp", text: "خدمة عملاء على مدار الساعة" },
+  { img: "https://cdn.files.salla.network/homepage/700639812/94e6ed06-5d36-47a9-b3b9-73f8b1b65387.webp", text: "توصيل سريع وآمن" },
+  { img: "https://cdn.files.salla.network/homepage/700639812/2b1c4189-05fa-4fcb-a163-410c69ce6678.webp", text: "منتجاتنا مميزة" }
+];
+
+/* ================== آراء العملاء ================== */
+var reviewsData = [
+  {
+    name: "عبدالله",
+    role: "حامل الجوال",
+    text: "الحامل ثابت جدًا في السيارة وما يهتز مع الطريق، استخدامه مريح ومرتب.",
+    stars: 5,
+    img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+  },
+  {
+    name: "نورة",
+    role: "كفرات الجوال",
+    text: "الكفر خامته حلوة وشكله أنيق، يعطي الجوال حماية وستايل بنفس الوقت.",
+    stars: 5,
+    img: "https://cdn-icons-png.flaticon.com/512/4140/4140047.png"
+  },
+  {
+    name: "خالد",
+    role: "الشواحن",
+    text: "الشاحن سريع وعملي، ممتاز للاستخدام اليومي وما واجهت معه أي مشكلة.",
+    stars: 5,
+    img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+  },
+  {
+    name: "سارة",
+    role: "السماعات",
+    text: "الصوت واضح والسماعة مريحة، مناسبة للمكالمات والاستخدام طول اليوم.",
+    stars: 5,
+    img: "https://cdn-icons-png.flaticon.com/512/4140/4140047.png"
+  }
+];
+
+/* ================== CSS ================== */
+var style = document.createElement("style");
+style.id = "custom-features-reviews-style";
+
+style.innerHTML = `
+  .custom-features-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 50px auto;
+    max-width: 1100px;
+    padding: 0 10px;
+    direction: rtl;
+  }
+
+  .custom-features-reviews h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d627c;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .features-cards-custom,
+  .reviews-cards-custom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .features-cards-custom .box {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    border: 2px solid #d8e2eb;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    animation: cardEnter 0.8s ease forwards;
+    transition: 0.3s;
+  }
+
+  .features-cards-custom .box img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    animation: floatIcon 2.8s ease-in-out infinite;
+  }
+
+  .features-cards-custom .box div {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2d627c;
+  }
+
+  .features-cards-custom .box:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.09);
+  }
+
+  .review-box {
+    width: 240px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #d8e2eb;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    animation: cardEnter 0.8s ease forwards;
+    transition: 0.3s;
+  }
+
+  .review-box:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .review-header img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .review-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .review-name {
+    font-weight: 700;
+    color: #2d627c;
+    font-size: 15px;
+  }
+
+  .review-role {
+    font-size: 12px;
+    background: #edf4fa;
+    color: #2d627c;
+    padding: 2px 8px;
+    border-radius: 20px;
+    width: fit-content;
+  }
+
+  .stars {
+    color: #f5a623;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .review-text {
+    font-size: 14px;
+    color: #4c4c4c;
+    line-height: 1.6;
+  }
+
+  @keyframes cardEnter {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes floatIcon {
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @media (max-width: 513px) {
+    .features-cards-custom .box,
+    .review-box {
+      width: calc(50% - 15px);
+    }
+
+    .custom-features-reviews {
+      gap: 35px;
+      margin: 35px auto;
+    }
+
+    .custom-features-reviews h2 {
+      font-size: 21px;
+    }
+
+    .review-box {
+      padding: 15px;
+    }
+
+    .review-text {
+      font-size: 13px;
+    }
+  }
+`;
+
+document.head.appendChild(style);
+
+/* ================== الحاوية الرئيسية ================== */
+var sectionContainer = document.createElement("div");
+sectionContainer.id = "custom-features-reviews-section";
+sectionContainer.className = "custom-features-reviews";
+
+/* ================== المميزات ================== */
+var featuresTitle = document.createElement("h2");
+featuresTitle.innerText = "ليش تختارنا";
+
+var featuresContainer = document.createElement("div");
+featuresContainer.className = "features-cards-custom";
+
+cardsData.forEach(function (card, i) {
+  var box = document.createElement("div");
+  box.className = "box";
+  box.style.animationDelay = (0.1 + i * 0.15) + "s";
+
+  box.innerHTML =
+    '<img src="' + card.img + '" alt="">' +
+    '<div>' + card.text + '</div>';
+
+  featuresContainer.appendChild(box);
+});
+
+/* ================== الآراء ================== */
+var reviewsTitle = document.createElement("h2");
+reviewsTitle.innerText = "آراء عملائنا";
+
+var reviewsContainer = document.createElement("div");
+reviewsContainer.className = "reviews-cards-custom";
+
+reviewsData.forEach(function (review, i) {
+  var box = document.createElement("div");
+  box.className = "review-box";
+  box.style.animationDelay = (0.1 + i * 0.15) + "s";
+
+  var stars = "";
+  for (var s = 0; s < review.stars; s++) {
+    stars += "★";
+  }
+
+  box.innerHTML =
+    '<div class="review-header">' +
+      '<img src="' + review.img + '" alt="">' +
+      '<div class="review-info">' +
+        '<div class="review-name">' + review.name + '</div>' +
+        '<div class="review-role">' + review.role + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="stars">' + stars + '</div>' +
+    '<div class="review-text">' + review.text + '</div>';
+
+  reviewsContainer.appendChild(box);
+});
+
+sectionContainer.appendChild(featuresTitle);
+sectionContainer.appendChild(featuresContainer);
+sectionContainer.appendChild(reviewsTitle);
+sectionContainer.appendChild(reviewsContainer);
+
+var footer =
+  document.querySelector("footer") ||
+  document.querySelector("#footer") ||
+  document.querySelector(".store-footer") ||
+  document.querySelector("salla-footer");
+
+if (footer && footer.parentNode) {
+  footer.parentNode.insertBefore(sectionContainer, footer);
+} else {
+  document.body.appendChild(sectionContainer);
+}
+
+}
+
+if (document.readyState === "loading") {
+document.addEventListener("DOMContentLoaded", initCustomFeaturesReviews);
+} else {
+initCustomFeaturesReviews();
+}
+
+})();

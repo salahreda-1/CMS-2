@@ -1,0 +1,65 @@
+Create a premium e-commerce website section design exactly like the reference image.
+
+
+
+Canvas size: 1920x720 horizontal banner.
+
+Overall layout:
+Clean split-section layout with a very light warm white background #F7F7F7.
+The design is divided into two main areas:
+- Left side: Arabic text content, right-aligned.
+- Right side: premium product photography scene.
+Keep the composition balanced, clean, minimal, and professional.
+
+Right side product image:
+Place a rectangular product hero image on the right side, occupying around 45% of the canvas width.
+Inside the image, show two GLOWMIES supplement bottles exactly like the reference:
+1. Red BIOTIN bottle on the left.
+2. Pink / magenta MARINE COLLAGEN PEPTIDES bottle on the right.
+Both bottles should be upright, sharp, realistic, and centered inside the product scene.
+Use glossy transparent plastic bottles with white caps and visible gummies inside.
+Create a pink and red luxury studio background with curved soft shapes, pink podiums, soft reflections, cranberry, beetroot, red gummies, and watermelon slices.
+Lighting should be soft commercial studio lighting, realistic shadows, premium beauty supplement advertising mood.
+The product scene should feel colorful, feminine, clean, fresh, and high-end.
+
+Left side Arabic text:
+Place Arabic text on the left side with right alignment.
+Use modern Arabic typography similar to Tajawal / Cairo / IBM Plex Sans Arabic.
+Headings should be bold in muted purple color #95508C.
+Paragraphs should be light gray #A6A6A6.
+Keep generous spacing between text blocks.
+Text should be vertically centered.
+
+Arabic text content exactly:
+
+دعم ثنائي متكامل
+جمعنا لك بين "البيوتين" و"الكولاجين" ليعملا معاً:
+البيوتين يحفز الكيراتين، والكولاجين يوفر أحماضاً أمينية لبناء الشعر، لنتيجة
+أفضل من استخدام كل عنصر لوحده
+
+تعزيز الكيراتين
+تركيبة غنية بالبيوتين الذي يساهم بشكل مباشر في إنتاج بروتين "الكيراتين"
+الطبيعي، مما يدعم كثافة الشعر ويمنحه مظهراً أكثر صحة وقوة
+
+عناية من الداخل
+لأن الجمال الحقيقي يبدأ من الأساس، تعمل هذه التركيبة على دعم صحة
+الشعر والبشرة والأظافر من الداخل، لتمنحك تغذية عميقة ومستدامة لا
+توفرها المنتجات الخارجية وحدها
+
+مقاومة التكسر
+يساعد الكولاجين في توفير "البلوك" الأساسي لبنية الشعرة، مما يساهم في
+تقليل التقصف وزيادة مرونة الشعر ولمعانه مع الاستمرار
+
+Design details:
+The main headings should be around 32px, bold, purple.
+Paragraphs should be around 23px, medium weight, light gray.
+Text blocks should have consistent spacing.
+Keep the text area clean with no icons and no extra decoration.
+The product image should align vertically with the text section.
+Keep large negative space and a clean luxury composition.
+
+Quality:
+Ultra realistic product photography, premium commercial design, clean composition, sharp focus, high-end beauty brand aesthetic, 8k quality, professional advertising layout.
+
+Negative prompt:
+Do not change the product shape, do not distort the labels, do not add extra bottles, do not use messy background, do not use neon colors, do not make the layout crowded, do not crop the bottles, do not use top view, do not add random English text, do not misalign Arabic typography, do not blur the product.
