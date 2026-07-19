@@ -1,0 +1,47 @@
+h2.section-title {
+  margin-bottom: 2rem;
+  position: relative;
+  display: table;
+  color: #000000 !important;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+section#\33 b5b2362-0fce-488a-abd6-0971e8814590  h2 {
+color: #000;
+font-size:42px;
+line-height:1.5em;
+
+}
+
+section#\33 b5b2362-0fce-488a-abd6-0971e8814590  p {
+color: #000;
+font-size:20px;
+line-height:1.5em;
+
+}
+
+@media(max-width:768px){
+
+section#\33 b5b2362-0fce-488a-abd6-0971e8814590  h2 {
+font-size:32px;
+}
+
+section#\33 b5b2362-0fce-488a-abd6-0971e8814590  p {
+
+font-size:18px;
+
+
+}
+
+}
+
+
+.css-products h2 {
+color:#000;
+font-size : 22px;
+}
