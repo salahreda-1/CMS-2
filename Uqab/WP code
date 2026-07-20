@@ -15,3 +15,7 @@
 .premium-woo-atc-button .kadence-svg-iconset{
     display:none
 }
+
+.premium-woo-products-inner ul {
+display:block;
+}
