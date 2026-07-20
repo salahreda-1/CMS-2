@@ -1,0 +1,17 @@
+#forminator-module-295 .forminator-button-submit{
+   display: block !important;
+		margin:auto !important;
+	 border-radius:6px;
+}
+
+.woocommerce-loop-product__title {
+  display: block;
+  max-width: 100% !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.premium-woo-atc-button .kadence-svg-iconset{
+    display:none
+}
